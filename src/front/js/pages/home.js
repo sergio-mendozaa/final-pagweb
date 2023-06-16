@@ -1,13 +1,10 @@
 import React, { useContext,useEffect } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+
 import "../../styles/home.css";
-import imagen1 from '/workspace/final-pagweb/src/front/img/priscilla-du-preez-tBypczR1CFI-unsplash.jpg';
-import imagen2 from '/workspace/final-pagweb/src/front/img/andrew-neel-QLqNalPe0RA-unsplash.jpg';
-import imagen3 from '/workspace/final-pagweb/src/front/img/towfiqu-barbhuiya-FnA5pAzqhMM-unsplash.jpg';
-import imagen4 from '/workspace/final-pagweb/src/front/img/campaign-creators-gMsnXqILjp4-unsplash.jpg';
-import imagen5 from '/workspace/final-pagweb/src/front/img/regularguy-eth-aFdTdWYXFd0-unsplash.jpg';
-import imagen6 from '/workspace/final-pagweb/src/front/img/vishnu-mohanan-pfR18JNEMv8-unsplash.jpg';
+import imagen1 from '/workspace/final-pagweb/src/front/img/annie-spratt-vGgn0xLdy8s-unsplash (1).jpg';
+import imagen2 from '/workspace/final-pagweb/src/front/img/ryoji-iwata-IBaVuZsJJTo-unsplash (2).jpg';
+
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 	useEffect(() => {
@@ -87,21 +84,22 @@ export const Home = () => {
 		});
 	
 		window.onscroll = function() {
-			// make navbar fixed & change logo color
 			if (window.pageYOffset > headerSection.offsetHeight - 75) {
-			  nav.classList.add("active");
-			  logoText.textContent = "Criptosasun"; // Cambiar el texto del logo
-			} else {
-			  nav.classList.remove("active");
-			  logoText.textContent = "Criptosasun"; // Cambiar el texto del logo cuando no está fijo
-			}
+				nav.classList.add("active");
+				logoText.textContent = "Criptosasun"; // Cambiar el texto del logo
+				logoText.style.color = "black"; // Cambiar el color del texto a negro
+			  } else {
+				nav.classList.remove("active");
+				logoText.textContent = "Criptosasun"; // Cambiar el texto del logo cuando no está fijo
+				logoText.style.color = "black"; // Restablecer el color del texto
+			  }
 	
 		  // header welcome fade out and in
 		  if (window.pageYOffset > 0) {
 			headerText.style.opacity = -window.pageYOffset / 300 + 1;
 		  }
 		  // home page JS
-		  if (pageTitle.text === "ROSA- Restaurant") {
+		  if (pageTitle.text === "CriptoSasun") {
 			//change dots background color
 			if (window.pageYOffset < headerSection.offsetHeight * 0.5) {
 			  dots.forEach(dot => dot.classList.remove("black"));
@@ -146,7 +144,7 @@ export const Home = () => {
 		};
 	
 		// home page JS
-		if (pageTitle.text === "ROSA- Restaurant") {
+		if (pageTitle.text === "CriptoSasun") {
 		  // svg-down smooth scroll
 		  svgDown.addEventListener("click", () => {
 			window.scroll({
@@ -269,7 +267,7 @@ export const Home = () => {
 			  <nav>
           <div className="logo">
             <a href="index.html">
-              <h4 style={{color:"#A96700", fontSize:"250%"}}>Criptosasun</h4>
+              <h4 style={{color:"black", fontSize:"250%"}}>Criptosasun</h4>
             </a>
           </div>
           <div className="toggle">
@@ -314,9 +312,9 @@ export const Home = () => {
       <div className="about-us">
         <div className="text" style={{marginTop:"7%"}}>
           <h2>Descubre</h2>
-          <h3>nuestra historia </h3>
+          <h3 style={{color:"#7B8FA1"}}>nuestra historia </h3>
           <div><i className="fas fa-asterisk"></i></div>
-          <p>CryptoSasun Energía es una empresa altamente competente. Nuestro enfoque innovador nos permite desarrollar soluciones vanguardistas que transforman la industria. Además lo que distingue es nuestro espíritu cercano y trabajador. En CryptoSasun, valoramos y cuidamos de cada miembro de nuestra comunidad, creando un ambiente de trabajo colaborativo y altamamente provechoso. Estamos comprometidos en brindar servicios de calidad y generar un impacto positivo en la vida de las personas y empresas.</p>
+          <p>CryptoSasun Energía es una empresa altamente competente. Nuestro enfoque innovador nos permite desarrollar soluciones vanguardistas que transforman la industria. Además lo que nos distingue es nuestro espíritu cercano y trabajador. En CryptoSasun, valoramos y cuidamos de cada miembro de nuestra comunidad, creando un ambiente de trabajo colaborativo y altamamente provechoso. Estamos comprometidos en brindar servicios de calidad y generar un impacto positivo en la vida de las personas y empresas.</p>
           <div><a className="a-CTA" href="#">About Us</a></div>
         </div>
         <div className="image-container">
@@ -331,8 +329,8 @@ export const Home = () => {
       <div className="recipes">
         <div className="image"></div>
         <div className="text" >
-          <h2 style={{marginLeft:"1.5cm"}}>Conectamos </h2>
-          <h3 style={{fontSize:"180%",marginLeft:"1.5cm"}}>como una buena receta</h3>
+          <h2 style={{marginLeft:"1.5cm",fontSize:"130%"}}>¿Necesitas ayuda? </h2>
+          <h3 style={{fontSize:"180%",marginLeft:"1cm"}}>¡Qué podemos hacer!</h3>
         </div>
       </div>
       <div className="menu">
@@ -348,28 +346,28 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="menu-image-container" style={{marginBottom:"-1%"}}>
-          <div className="image active">
-            <img src={imagen4} alt="Food Photo"style={{height:"89%",width:"95%"}} />
+        <div className="menu-image-container" >
+          <div className="image active" >
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924478/adi-goldstein-EUsVwEOsblE-unsplash_qicdnu.jpg" alt="Food Photo" />
           </div>
           <div className="image">
-            <img src={imagen6} alt="Food Photo" style={{height:"89%",width:"95%"}} />
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924467/dylan-calluy-JpflvzEl5cg-unsplash_pezkwc.jpg" alt="Food Photo"  />
+          </div>
+          <div className="image" >
+            <img style={{height:"200px"}} src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924436/shubham-dhage-UxDU0Gg5pqQ-unsplash_z1ku7n.jpg"alt="Food Photo" />
           </div>
           <div className="image">
-            <img src={imagen5} alt="Food Photo" style={{height:"98%",width:"95%"}}/>
-          </div>
-          <div className="image">
-            <img src={imagen3} alt="Food Photo"style={{height:"98%",width:"95%"}} />
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924624/arif-riyanto-vJP-wZ6hGBg-unsplash_1_iu1zk3.jpg" alt="Food Photo" />
           </div>
         </div>
         <div className="text" style={{marginTop:"3%"}}>
           <h2>Descubre</h2>
-          <h3>Que te ofrecemos</h3>
+          <h3 style={{color:"#7B8FA1"}}>Que te ofrecemos</h3>
           <div><i className="fas fa-asterisk"></i></div>
           <p>En CriptoSasun, ofrecemos una amplia gama de servicios diseñados para satisfacer las necesidades de nuestros clientes. Desde soluciones tecnológicas innovadoras hasta atención personalizada, nos esforzamos por brindar la mejor experiencia posible. Uno de nuestros objetivos principales es ayudar a nuestros clientes a alcanzar sus metas , superar sus expectativas, poder ahorrar... Para obtener más información sobre lo que ofrecemos y cómo podemos ayudarle, lo invitamos a explorar nuestro sitio web, donde encontrará detalles completos sobre nuestros productos, y recursos informativos. No pierda la oportunidad de descubrir cómo podemos mejorar su vida o negocio. ¡Infórmese ahora y déjenos ser su socio de confianza en el camino hacia el éxito!</p>
           <div><a className="a-CTA" href="#">Contáctanos</a></div>
         </div>
-      </div>
+      </div> 
       <div className="fixed-image">
         <div className="text">
           <h2>La perfecta</h2>

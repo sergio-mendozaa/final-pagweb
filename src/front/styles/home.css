@@ -48,7 +48,8 @@ p {
     line-height: 27px;
 }
 .a-CTA {
-    border-bottom: 2px solid #a96700;
+    color:black;
+    border-bottom: 2px solid;
     padding-bottom: 4px;
     letter-spacing: 1.5px;
     font-size: 18px;
@@ -60,16 +61,17 @@ p, .a-CTA, input, header .navigation-bar a, .copyright li, .contact .form form l
     font-family: Cabin, sans-serif;
 }
 .fa-asterisk, .a-CTA, h2, header .navigation-bar a:hover, header nav.active .navigation-bar a:hover, footer .social-media .links a:hover, .copyright .info li a, .copyright .CTA li a:hover {
-    color: #a96700;
+    color: black;
 }
 header nav .navigation-bar .underline, header .text .button button:hover, .contact .form form button:hover, .contact .text i:hover {
-    background-color: #a96700;
+    background-color: black;
 }
 header .navigation-bar ul li, header .text, .about-us .text, .reservation .text, .menu .box-model, .menu .text, .fixed-image .text, footer, .copyright, .contact .text i {
     text-align: center;
 }
 header nav, header .navigation-bar ul, .about-us, .reservation, .about-us .image-container, .reservation .image-container, .menu, .menu .menu-image-container, footer .contact-container, .copyright ul, .contact {
     display: flex;
+    
 }
 header nav .toggle, header nav .toggle span, header .navigation-bar, header .navigation-bar ul, .menu .box-model .close, footer .social-media .links a, .copyright .CTA li a {
     transition: .3s;
@@ -95,7 +97,7 @@ button, .dots > div, header nav .toggle, header .arrow-down, .menu .box-model .c
     background-color: #fff;
 }
 h1, h3, header .navigation-bar a, header .text span, .menu .box-model .close:hover, footer .text h2, footer .text p, footer .social-media .links a, .contact .text i, .contact .form form button {
-    color: #fff;
+    color: white;
 }
 header nav, header .navigation-bar.show, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, header .text .arrow .left:after, .menu .box-model, .copyright .arrow-up {
     left: 0;
@@ -577,9 +579,10 @@ header .text .arrow .left:after, header .text .arrow .right:after, header .text 
 
 /*Start Header*/
 header {
-    height: calc(100vh - 22px);
+    height: 97vh;
     background-size: cover;
-    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988534/header.jpg") fixed bottom;
+    background-position: center bottom;
+    background-image: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686911035/alina-grubnyak-ZiQkhI7417A-unsplash_sdzazg.jpg");
     padding: 20px 70px;
 }
 header nav {
@@ -733,7 +736,7 @@ header .arrow-down {
     padding: 40px 52px 0 0;
 }
 .about-us .text h3, .reservation .text h3 {
-    color: #000;
+    color: black;
 }
 .about-us .text .fa-asterisk, .reservation .text .fa-asterisk {
     color: #9a9998;
@@ -749,7 +752,7 @@ header .arrow-down {
 /*Start Recipes*/
 .recipes .image {
     height: 350px;
-    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988529/three-col-1.jpg") fixed center;
+    background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686916591/BeFunky-collage_qdqrbf.jpg") fixed center;
     background-size: cover;
 }
 /*End Recipes*/
@@ -804,7 +807,7 @@ header .arrow-down {
 }
 .menu .menu-image-container {
     flex-wrap: wrap;
-    flex: 60%;
+    flex: 50%;
 }
 .menu .menu-image-container .image {
     margin: 0 20px 20px 0;
