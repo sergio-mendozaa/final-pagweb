@@ -267,7 +267,7 @@ export const Home = () => {
 			  <nav>
           <div className="logo">
             <a href="index.html">
-              <h4 style={{color:"black", fontSize:"250%"}}>Criptosasun</h4>
+              <h4 style={{color:"black", fontSize:"259%"}}>Criptosasun</h4>
             </a>
           </div>
           <div className="toggle">
@@ -275,15 +275,12 @@ export const Home = () => {
             <span className="middle"></span>
             <span className="last"></span>
           </div>
-          <div className="navigation-bar">
+          <div className="navigation-bar" style={{fontSize:"20px",marginLeft:"6.5cm"}}>
             <ul>
               <li className="active"><a href="index.html">Home<span className="underline"></span></a></li>
-              <li><a href="#">Reservations<span className="underline"></span></a></li>
-              <li><a href="#">Menu<span className="underline"></span></a></li>
-              <li><a href="#">Blog<span className="underline"></span></a></li>
-              <li><a href="#">Features<span className="underline"></span></a></li>
-              <li><a href="#">Shop<span className="underline"></span></a></li>
-              <li><a href="#">Contact<span className="underline"></span></a></li>
+              <li><a href="#">Criptosasun<span className="underline"></span></a></li>
+              <li><a href="#">Noticias<span className="underline"></span></a></li>
+              <li><a href="#">Contáctanos<span className="underline"></span></a></li>
             </ul>
           </div>
         </nav>
@@ -348,16 +345,16 @@ export const Home = () => {
         </div>
         <div className="menu-image-container" >
           <div className="image active" >
-            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924478/adi-goldstein-EUsVwEOsblE-unsplash_qicdnu.jpg" alt="Food Photo" />
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687022201/adi-goldstein-EUsVwEOsblE-unsplash_2_pvbiyk.jpg" alt="Food Photo" />
           </div>
           <div className="image">
-            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924467/dylan-calluy-JpflvzEl5cg-unsplash_pezkwc.jpg" alt="Food Photo"  />
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687021116/towfiqu-barbhuiya-joqWSI9u_XM-unsplash_1_cjgmgb.jpg" alt="Food Photo"  />
           </div>
           <div className="image" >
-            <img style={{height:"200px"}} src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924436/shubham-dhage-UxDU0Gg5pqQ-unsplash_z1ku7n.jpg"alt="Food Photo" />
+            <img  src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687191115/shubham-dhage-UxDU0Gg5pqQ-unsplash_1_xu1asz.jpg"alt="Food Photo"style={{height:"92%"}} />
           </div>
           <div className="image">
-            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686924624/arif-riyanto-vJP-wZ6hGBg-unsplash_1_iu1zk3.jpg" alt="Food Photo" />
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687021549/kevin-ku-w7ZyuGYNpRQ-unsplash_1_bidjuc.jpg" alt="Food Photo"style={{height:"92%",width:"15cm"}} />
           </div>
         </div>
         <div className="text" style={{marginTop:"3%"}}>
@@ -370,32 +367,32 @@ export const Home = () => {
       </div> 
       <div className="fixed-image">
         <div className="text">
-          <h2>La perfecta</h2>
-          <h3>Combinación</h3>
+          <h2 >La combinación</h2>
+          <h3 style={{marginBottom:"3cm"}}>Perfecta</h3>
         </div>
       </div>
       <div className="reservation">
-        <div className="text" style={{marginTop:"5%"}}>
-          <h2>Culinary</h2>
-          <h3>Delight</h3>
+        <div className="text" style={{marginTop:"2%"}}>
+          <h2>Algoritmos</h2>
+          <h3 style={{color:"#7B8FA1"}}>Clásicos vs Cuánticos</h3>
           <div><i className="fas fa-asterisk"></i></div>
-          <p>We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.</p>
+          <p>Un algoritmo es una secuencia de pasos o instrucciones bien definidas que resuelven un problema o realizan una tarea específica. En el contexto de la informática, los algoritmos son fundamentales para el procesamiento de datos y la toma de decisiones en diferentes aplicaciones.Podemos distinguir 2 tipos Algoritmos, clásicos que son aquellos diseñados para ejecutarse en computadoras tradicionales basadas en bits clásicos. Utilizan operaciones lógicas y aritméticas para realizar cálculos. Son ampliamente utilizados en todas las áreas de la informática, desde cálculos matemáticos hasta búsquedas en bases de datos y algoritmos de ordenamiento y los Algoritmos cuánticos que se basan en los principios de la mecánica cuántica y utilizan qubits, que son la unidad básica de información cuántica. Aprovechan las propiedades únicas de los qubits, como la superposición y el entrelazamiento, para realizar cálculos de manera más eficiente en ciertos problemas específicos. Los algoritmos cuánticos tienen el potencial de resolver problemas complejos, como la factorización de números grandes y la búsqueda en grandes conjuntos de datos, de manera más rápida que los algoritmos clásicos.</p>
           <div><a className="a-CTA" href="#">Make a Reservation</a></div>
         </div>
-        <div className="image-container">
+        <div className="image-container"style={{marginTop:"3%"}}>
           <div className="image image1">
-            <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988518/bacon-1.jpg" alt="Food Photo" />
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687192800/karl-pawlowicz-QUHuwyNgSA0-unsplash_1_vaxwbn.jpg" alt="Food Photo" style={{height:"15cm",width:"12cm"}}/>
           </div>
           <div className="image image2">
-            <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988518/bacon-2.jpg" alt="Food Photo" />
+            <img src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687192684/DreamShaper_v5_Algoritmo_cuntico_Para_representar_un_algoritmo_0_1_hopgxu.jpg" alt="Food Photo" style={{height:"15cm",width:"12cm"}}/>
           </div>
         </div>
       </div>
       <footer>
         <div className="text">
-          <h2>ABOUT ROSA</h2>
+          <h2>ABOUT CriptoSasun</h2>
           <div><i className="fas fa-asterisk"></i></div>
-          <p>ROSA is an enchanting and easy-to-use parallax Restaurant WordPress theme that allows you to tell your story in a dynamic, narrative, and enjoyable way, making it perfect for restaurants, bakeries, bars, or coffee shops.</p>
+          <p>Aqui encontrará todas las maneras de contactar con nosotros</p>
         </div>
         <div className="contact-container">
           <div className="social-media">

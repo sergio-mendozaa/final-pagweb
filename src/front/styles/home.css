@@ -141,7 +141,7 @@ header .text .arrow .left:after, header .text .arrow .right:after, header .text 
     margin: auto;
 }
 .loader-wrap {
-    background-color: #a96700;
+    background-color: black;
     z-index: 30;
 }
 .loader-wrap.remove {
@@ -827,9 +827,10 @@ header .arrow-down {
 
 /*Start fixed-image*/
 .fixed-image {
-    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988533/frontpage-menu.jpg") fixed center;
+    background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687027746/nick-brunner-96wH9-hzdWY-unsplash_jr9ygn.jpg") fixed bottom;
     background-size: cover;
     height: 400px;
+    
 }
 /*End fixed-image*/
 
