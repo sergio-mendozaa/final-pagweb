@@ -59,7 +59,7 @@ p {
 p,
 .a-CTA,
 input,
-.header-primera-pagina .navigation-bar a,
+.header-segunda-pagina .navigation-bar a,
 .copyright li,
 .contact .form form label,
 .contact .form form button {
@@ -68,21 +68,21 @@ input,
 .fa-asterisk,
 .a-CTA,
 h2,
-.header-primera-pagina .navigation-bar a:hover,
-.header-primera-pagina nav.active .navigation-bar a:hover,
+.header-segunda-pagina .navigation-bar a:hover,
+.header-segunda-pagina nav.active .navigation-bar a:hover,
 footer .social-media .links a:hover,
 .copyright .info li a,
 .copyright .CTA li a:hover {
   color: black;
 }
-.header-primera-pagina nav .navigation-bar .underline,
-.header-primera-pagina .text .button button:hover,
+.header-segunda-pagina nav .navigation-bar .underline,
+.header-segunda-pagina .text .button button:hover,
 .contact .form form button:hover,
 .contact .text i:hover {
   background-color: black;
 }
-.header-primera-pagina .navigation-bar ul li,
-.header-primera-pagina .text,
+.header-segunda-pagina .navigation-bar ul li,
+.header-segunda-pagina .text,
 .about-us .text,
 .reservation .text,
 .menu .box-model,
@@ -93,8 +93,8 @@ footer,
 .contact .text i {
   text-align: center;
 }
-.header-primera-pagina nav,
-.header-primera-pagina .navigation-bar ul,
+.header-segunda-pagina nav,
+.header-segunda-pagina .navigation-bar ul,
 .about-us,
 .reservation,
 .about-us .image-container,
@@ -106,35 +106,35 @@ footer .contact-container,
 .contact {
   display: flex;
 }
-.header-primera-pagina nav .toggle,
-.header-primera-pagina nav .toggle span,
-.header-primera-pagina .navigation-bar,
-.header-primera-pagina .navigation-bar ul,
+.header-segunda-pagina nav .toggle,
+.header-segunda-pagina nav .toggle span,
+.header-segunda-pagina .navigation-bar,
+.header-segunda-pagina .navigation-bar ul,
 .menu .box-model .close,
 footer .social-media .links a,
 .copyright .CTA li a {
   transition: 0.3s;
 }
-.header-primera-pagina,
-.header-primera-pagina nav .toggle span,
-.header-primera-pagina .navigation-bar a,
-.header-primera-pagina .text,
-.header-primera-pagina .text .arrow .left,
-.header-primera-pagina .text .arrow .right,
-.recipes,
+.header-segunda-pagina,
+.header-segunda-pagina nav .toggle span,
+.header-segunda-pagina .navigation-bar a,
+.header-segunda-pagina .text,
+.header-segunda-pagina .text .arrow .left,
+.header-segunda-pagina .text .arrow .right,
+.fotosnoticias,
 .menu .box-image-container,
 .fixed-image .text,
 .copyright,
 .copyright .arrow-up {
   position: relative;
 }
-.header-primera-pagina nav .toggle,
-.header-primera-pagina .navigation-bar .underline,
-.header-primera-pagina .text .arrow .left:after,
-.header-primera-pagina .text .arrow .right:after,
-.header-primera-pagina .svg-down,
-.header-primera-pagina .arrow-down,
-.recipes .text,
+.header-segunda-pagina nav .toggle,
+.header-segunda-pagina .navigation-bar .underline,
+.header-segunda-pagina .text .arrow .left:after,
+.header-segunda-pagina .text .arrow .right:after,
+.header-segunda-pagina .svg-down,
+.header-segunda-pagina .arrow-down,
+.fotosnoticias .text,
 .menu .box-model .close,
 .menu .box-model .arrow .arrow-right,
 .menu .box-model .arrow .arrow-left,
@@ -142,7 +142,7 @@ footer .social-media .links a,
 .copyright .svg-up {
   position: absolute;
 }
-.recipes .text,
+.fotosnoticias .text,
 .fixed-image .text,
 .menu .box-image-container,
 .menu .box-image-container .box-image {
@@ -150,9 +150,9 @@ footer .social-media .links a,
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.header-primera-pagina nav,
-.header-primera-pagina .navigation-bar a:hover .underline,
-.header-primera-pagina .navigation-bar li.active .underline,
+.header-segunda-pagina nav,
+.header-segunda-pagina .navigation-bar a:hover .underline,
+.header-segunda-pagina .navigation-bar li.active .underline,
 .menu .box-model,
 .menu .box-image-container,
 .menu .box-image-container .box-image {
@@ -160,8 +160,8 @@ footer .social-media .links a,
 }
 button,
 .dots > div,
-.header-primera-pagina nav .toggle,
-.header-primera-pagina .arrow-down,
+.header-segunda-pagina nav .toggle,
+.header-segunda-pagina .arrow-down,
 .menu .box-model .close,
 .menu .box-model .arrow .arrow-right,
 .menu .box-model .arrow .arrow-left,
@@ -171,20 +171,20 @@ footer .newsletter i,
   cursor: pointer;
 }
 .dots .active,
-.header-primera-pagina nav.active,
-.header-primera-pagina nav.active .toggle.active span,
-.header-primera-pagina nav .toggle span,
-.header-primera-pagina .navigation-bar .underline,
-.header-primera-pagina .text .arrow .left,
-.header-primera-pagina .text .arrow .right,
-.header-primera-pagina .text .button button,
+.header-segunda-pagina nav.active,
+.header-segunda-pagina nav.active .toggle.active span,
+.header-segunda-pagina nav .toggle span,
+.header-segunda-pagina .navigation-bar .underline,
+.header-segunda-pagina .text .arrow .left,
+.header-segunda-pagina .text .arrow .right,
+.header-segunda-pagina .text .button button,
 .contact form button {
   background-color: #fff;
 }
 h1,
 h3,
-.header-primera-pagina .navigation-bar a,
-.header-primera-pagina .text span,
+.header-segunda-pagina .navigation-bar a,
+.header-segunda-pagina .text span,
 .menu .box-model .close:hover,
 footer .text h2,
 footer .text p,
@@ -193,18 +193,18 @@ footer .social-media .links a,
 .contact .form form button {
   color: white;
 }
-.header-primera-pagina nav,
-.header-primera-pagina .navigation-bar.show,
-.header-primera-pagina .navigation-bar a:hover .underline,
-.header-primera-pagina .navigation-bar li.active .underline,
-.header-primera-pagina .text .arrow .left:after,
+.header-segunda-pagina nav,
+.header-segunda-pagina .navigation-bar.show,
+.header-segunda-pagina .navigation-bar a:hover .underline,
+.header-segunda-pagina .navigation-bar li.active .underline,
+.header-segunda-pagina .text .arrow .left:after,
 .menu .box-model,
 .copyright .arrow-up {
   left: 0;
 }
-.header-primera-pagina .text .arrow .left:after,
-.header-primera-pagina .text .arrow .right:after,
-.header-primera-pagina .text span,
+.header-segunda-pagina .text .arrow .left:after,
+.header-segunda-pagina .text .arrow .right:after,
+.header-segunda-pagina .text span,
 footer .social-media .links a,
 footer .newsletter i,
 .copyright .arrow-up,
@@ -685,21 +685,21 @@ footer .newsletter i,
 
 /*Start Home Page*/
 
-/*Start .header-primera-pagina*/
-.header-primera-pagina {
+/*Start .header-segunda-pagina*/
+.header-segunda-pagina {
   height: 97vh;
   background-size: cover;
-  background-position: center bottom;
-  background-image: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686911035/alina-grubnyak-ZiQkhI7417A-unsplash_sdzazg.jpg");
+  background-position: center;
+  background-image: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687338101/juliana-malta-Uy0Bq8vYjk4-unsplash_1_zjfuar.jpg");
   padding: 20px 70px;
 }
-.header-primera-pagina nav {
+.header-segunda-pagina nav {
   position: fixed;
   top: 0;
   padding: 36px 36px 20px;
   z-index: 20;
 }
-.header-primera-pagina nav .toggle {
+.header-segunda-pagina nav .toggle {
   display: none;
   top: 26px;
   left: 20px;
@@ -708,62 +708,62 @@ footer .newsletter i,
   padding: 0;
   z-index: 21;
 }
-.header-primera-pagina nav .toggle:focus {
+.header-segunda-pagina nav .toggle:focus {
   outline: none;
 }
-.header-primera-pagina nav.active .toggle span {
+.header-segunda-pagina nav.active .toggle span {
   background-color: #000;
 }
-.header-primera-pagina nav .toggle.active {
+.header-segunda-pagina nav .toggle.active {
   left: 32%;
 }
-.header-primera-pagina nav .toggle.active .first {
+.header-segunda-pagina nav .toggle.active .first {
   top: 16px;
   transform: rotate(-45deg);
 }
-.header-primera-pagina nav .toggle.active .last {
+.header-segunda-pagina nav .toggle.active .last {
   top: 0;
   transform: rotate(45deg);
 }
-.header-primera-pagina nav .toggle .hide {
+.header-segunda-pagina nav .toggle .hide {
   transition: 0s;
   visibility: hidden;
 }
-.header-primera-pagina nav .toggle span {
+.header-segunda-pagina nav .toggle span {
   display: block;
   width: 30px;
   height: 2px;
   border-radius: 40px;
 }
-.header-primera-pagina nav .toggle span:not(:last-of-type) {
+.header-segunda-pagina nav .toggle span:not(:last-of-type) {
   margin-bottom: 6px;
 }
-.header-primera-pagina nav .logo {
+.header-segunda-pagina nav .logo {
   flex-basis: 56%;
   padding-left: 50px;
 }
-.header-primera-pagina .navigation-bar.show {
+.header-segunda-pagina .navigation-bar.show {
   width: 40%;
 }
-.header-primera-pagina .navigation-bar.show a {
+.header-segunda-pagina .navigation-bar.show a {
   color: #ccc !important;
 }
-.header-primera-pagina .navigation-bar.show a:hover {
+.header-segunda-pagina .navigation-bar.show a:hover {
   color: #fff !important;
 }
-.header-primera-pagina .navigation-bar ul li {
+.header-segunda-pagina .navigation-bar ul li {
   flex: 1;
   padding: 0 10px;
 }
-.header-primera-pagina .navigation-bar a {
+.header-segunda-pagina .navigation-bar a {
   text-decoration: none;
   transition: all 0.5s;
   font-size: 16px;
 }
-.header-primera-pagina nav.active .navigation-bar a {
+.header-segunda-pagina nav.active .navigation-bar a {
   color: #000;
 }
-.header-primera-pagina .navigation-bar .underline {
+.header-segunda-pagina .navigation-bar .underline {
   height: 2px;
   width: 0;
   left: 50%;
@@ -771,43 +771,43 @@ footer .newsletter i,
   transition: all 0.3s;
   display: block;
 }
-.header-primera-pagina .text {
+.header-segunda-pagina .text {
   top: 24%;
 }
-.header-primera-pagina .text h1 {
+.header-segunda-pagina .text h1 {
   margin-bottom: 0;
 }
-.header-primera-pagina .text .arrow .left,
-.header-primera-pagina .text .arrow .right {
+.header-segunda-pagina .text .arrow .left,
+.header-segunda-pagina .text .arrow .right {
   height: 3px;
   width: 100px;
 }
-.header-primera-pagina .text .arrow .left {
+.header-segunda-pagina .text .arrow .left {
   left: -4%;
 }
-.header-primera-pagina .text .arrow .right {
+.header-segunda-pagina .text .arrow .right {
   right: -4%;
 }
-.header-primera-pagina .text .arrow .left:after,
-.header-primera-pagina .text .arrow .right:after {
+.header-segunda-pagina .text .arrow .left:after,
+.header-segunda-pagina .text .arrow .right:after {
   content: "";
   border: 10px solid transparent;
   border-left-color: #fff;
   top: -8px;
 }
-.header-primera-pagina .text .arrow .right:after {
+.header-segunda-pagina .text .arrow .right:after {
   right: 0;
   border-color: transparent #fff transparent transparent;
 }
-.header-primera-pagina .text .arrow .fa-asterisk {
+.header-segunda-pagina .text .arrow .fa-asterisk {
   vertical-align: super;
 }
-.header-primera-pagina .text span {
+.header-segunda-pagina .text span {
   font-family: "Source Code Pro", sans-serif;
   font-size: 15px;
   margin-bottom: 12px;
 }
-.header-primera-pagina .text .button button,
+.header-segunda-pagina .text .button button,
 .contact form button {
   border: none;
   padding: 9px 18px;
@@ -816,11 +816,11 @@ footer .newsletter i,
   font-family: source_sans_problack, sans-serif;
   border-radius: 3px;
 }
-.header-primera-pagina .text .button button,
+.header-segunda-pagina .text .button button,
 .contact form button:focus {
   outline: none;
 }
-.header-primera-pagina .svg-down {
+.header-segunda-pagina .svg-down {
   bottom: 0;
   left: 50%;
   z-index: 5;
@@ -828,7 +828,7 @@ footer .newsletter i,
   margin-bottom: -12px;
   color: #fff;
 }
-.header-primera-pagina .arrow-down {
+.header-segunda-pagina .arrow-down {
   width: 70px;
   height: 50px;
   bottom: -10px;
@@ -838,7 +838,7 @@ footer .newsletter i,
   background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/arrow-down.png")
     no-repeat center;
 }
-/*End .header-primera-pagina*/
+/*End .header-segunda-pagina*/
 
 /*Start About-Us*/
 .about-us,
@@ -867,15 +867,25 @@ footer .newsletter i,
   margin-left: 20px;
 }
 /*End About-Us*/
+.fotosnoticias .image-container {
+  display: flex;
+}
 
-/*Start Recipes*/
-.recipes .image {
-  height: 350px;
-  background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1686916591/BeFunky-collage_qdqrbf.jpg")
+.fotosnoticias .image-part {
+  height: 700px;
+  width: 33.33%; /* Divide the container into three parts */
+}
+
+.image-left,
+.image-right {
+  background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687366299/BeFunky-collage_1_uapn81.jpg")
     fixed center;
   background-size: cover;
 }
-/*End Recipes*/
+
+.image-middle {
+  background: white; /* Set the background to white */
+}
 
 /*Start Menu*/
 .menu {
@@ -1048,7 +1058,7 @@ footer .newsletter i {
 /*End Home Page*/
 
 /*Start Contact Page*/
-.contact-.header-primera-pagina {
+.contact-.header-segunda-pagina {
   background-image: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988526/contact-food.jpg");
   height: 40vh;
 }
@@ -1137,10 +1147,10 @@ footer .newsletter i {
   .dots {
     display: none;
   }
-  .header-primera-pagina {
+  .header-segunda-pagina {
     height: calc(100vh - 10px);
   }
-  .header-primera-pagina nav .logo {
+  .header-segunda-pagina nav .logo {
     padding-left: 0;
   }
   .about-us {
@@ -1177,7 +1187,7 @@ footer .newsletter i {
 }
 
 @media (max-width: 768px) {
-  .header-primera-pagina nav {
+  .header-segunda-pagina nav {
     display: block;
     text-align: center;
     left: 0;
@@ -1185,10 +1195,10 @@ footer .newsletter i {
     width: 100%;
     padding-top: 25px;
   }
-  .header-primera-pagina nav .toggle {
+  .header-segunda-pagina nav .toggle {
     display: block;
   }
-  .header-primera-pagina .navigation-bar {
+  .header-segunda-pagina .navigation-bar {
     position: fixed;
     top: 0;
     left: -174px;
@@ -1198,11 +1208,11 @@ footer .newsletter i {
     z-index: 20;
     padding: 40px;
   }
-  .header-primera-pagina .navigation-bar ul {
+  .header-segunda-pagina .navigation-bar ul {
     display: block;
     padding-top: 40px;
   }
-  .header-primera-pagina .navigation-bar ul li {
+  .header-segunda-pagina .navigation-bar ul li {
     text-align: left;
     padding: 14px 0;
   }
@@ -1232,16 +1242,16 @@ footer .newsletter i {
   h2 {
     font-size: 90px;
   }
-  .header-primera-pagina {
+  .header-segunda-pagina {
     padding: 0;
   }
-  .header-primera-pagina nav .logo {
+  .header-segunda-pagina nav .logo {
     padding-left: 0;
   }
-  .header-primera-pagina nav .toggle.active {
+  .header-segunda-pagina nav .toggle.active {
     left: 36%;
   }
-  .header-primera-pagina .navigation-bar.show {
+  .header-segunda-pagina .navigation-bar.show {
     padding: 20px;
     width: 48%;
   }
