@@ -295,15 +295,15 @@ export const Home = () => {
                   Noticias<span className="underline"></span>
                 </Link>
               </li>
+
+              <li>
+                <Link to="/contactanos">
+                  Contáctanos<span className="underline"></span>
+                </Link>
+              </li>
               <li>
                 <a href="#">
                   Criptosasun<span className="underline"></span>
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                  Contáctanos<span className="underline"></span>
                 </a>
               </li>
             </ul>

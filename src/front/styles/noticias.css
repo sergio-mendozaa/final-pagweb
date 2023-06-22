@@ -5,7 +5,7 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /*Start Global*/
 * {
   box-sizing: border-box;
@@ -29,7 +29,7 @@ img {
   max-width: 100%;
 }
 h2 {
-  font-family: "Herr Von Muellerhoff", cursive;
+  font-family: "Roboto", sans-serif;
   font-size: 120px;
   font-weight: normal;
   margin: 0 0 -55px;
@@ -961,8 +961,8 @@ footer .newsletter i,
 /*End Menu*/
 
 /*Start fixed-image*/
-.fixed-image {
-  background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687027746/nick-brunner-96wH9-hzdWY-unsplash_jr9ygn.jpg")
+.fixed-image-ordenador {
+  background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687450953/annie-spratt-FLY7CEwbJsg-unsplash_1_zptmxb.jpg")
     fixed bottom;
   background-size: cover;
   height: 400px;
@@ -1332,7 +1332,7 @@ body {
   opacity: 0;
   transform: translate3d(0, 40px, 0);
   animation-fill-mode: both;
-  animation-duration: 4s;
+  animation-duration: 5s;
 }
 .demo-card.visible {
   animation-name: fadeInUp;
