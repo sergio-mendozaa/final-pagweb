@@ -1,12 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/noticias.css";
-import imagen1 from "/workspace/final-pagweb/src/front/img/annie-spratt-vGgn0xLdy8s-unsplash (1).jpg";
-import imagen2 from "/workspace/final-pagweb/src/front/img/ryoji-iwata-IBaVuZsJJTo-unsplash (2).jpg";
-
 export const Noticias = () => {
   const { store, actions } = useContext(Context);
+  const cardRefs = useRef([]);
   useEffect(() => {
     const body = document.querySelector("body");
     const loader = document.querySelector(".loader-wrap");
@@ -246,6 +244,22 @@ export const Noticias = () => {
       window.addEventListener("click", boxModelFun);
       boxModelArrow.addEventListener("click", boxModelFun);
     }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cardRefs.current.forEach((ref) => observer.observe(ref));
+
+    return () => cardRefs.current.forEach((ref) => observer.unobserve(ref));
   }, []);
   return (
     <>
@@ -400,7 +414,7 @@ export const Noticias = () => {
           </div>
         </div>
 
-        <div className="text" style={{ marginRight: "3.5cm" }}>
+        <div className="text" style={{ marginRight: "2.5cm" }}>
           <h2>Descubre</h2>
           <h3 style={{ color: "#7B8FA1" }}>Que te ofrecemos</h3>
           <div>
@@ -410,17 +424,219 @@ export const Noticias = () => {
             Bienvenidos a nuestra línea de tiempo de noticias, una innovadora
             representación de nuestro viaje a través del tiempo. Aquí, la
             historia de nuestra empresa se despliega en una sucesión lineal,
-            trazando el recorrido de nuestras noticias y acontecimientos de una
-            manera clara y ordenada. Cada hito, cada triunfo, cada pieza de
-            nuestro legado se despliega con elegancia a lo largo del eje del
-            tiempo. Al sumergirse en este recorrido, serán guiados de manera
-            cronológica, desde nuestros inicios hasta el presente, explorando
-            los puntos de inflexión que han definido nuestro camino. Es nuestro
-            placer invitarlos a desplazarse a través de este viaje en el tiempo,
-            a experimentar nuestra historia tal como se ha desarrollado, en todo
-            su esplendor cronológico.
+            trazando el recorrido de nuestras noticias, acontecimientos e
+            informes inportantes de una manera clara y ordenada. Cada hito, cada
+            triunfo, cada pieza de nuestro legado se despliega con elegancia a
+            lo largo del eje del tiempo. Al sumergirse en este recorrido, serán
+            guiados de manera cronológica, desde nuestros inicios hasta el
+            presente, explorando los puntos de inflexión que han definido
+            nuestro camino. Es nuestro placer invitarlos a desplazarse a través
+            de este viaje en el tiempo, a experimentar nuestra historia tal como
+            se ha desarrollado, en todo su esplendor cronológico.
           </p>
         </div>
+      </div>
+      <div className="diagramatiempo">
+        <section id="timeline">
+          <h1 style={{ color: "black" }}>Línea del tiempo </h1>
+
+          <div
+            className="demo-card-wrapper"
+            style={{ marginLeft: "5%", marginTop: "2cm" }}
+          >
+            <div className="line"></div>
+            <div
+              ref={(ref) => cardRefs.current.push(ref)}
+              className="demo-card visible demo-card--step1"
+              style={{
+                width: "500px",
+                height: "500px",
+                marginLeft: "15%",
+              }}
+            >
+              <div className="head">
+                <div className="number-box">
+                  <span>01</span>
+                </div>
+                <h2>
+                  <span
+                    className="small"
+                    style={{ color: "white", marginTop: "1%" }}
+                  >
+                    Desafío COVID19
+                  </span>
+                  <p style={{ color: "white" }}>
+                    Sistemas inteligentes de ventilación mecánica de alta
+                    precisión
+                  </p>
+                </h2>
+              </div>
+              <div className="body">
+                <p>
+                  Criptosasun trabajó para resolver un problema crítico en la
+                  atención médica: proporcionar ventilación mecánica precisa y
+                  confiable a un costo asequible. Su diseño utiliza elementos ya
+                  existentes y probados, incluyendo un sistema de reanimación de
+                  bolsa, un sistema derivado de los tensiómetros controlado por
+                  Arduino, y una aplicación de inteligencia artificial que
+                  permite adaptar los diferentes modos de uso para el paciente.
+                  Invitan a la comunidad de Arduino, a las universidades y a
+                  otros interesados a colaborar en su desarrollo para una
+                  implementación rápida y efectiva.
+                </p>
+                <img
+                  src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687432037/5e808acefea9a31a62d858e2_COVID_19_RESPIRADOR_CRIPTOSASUN_2_1_nkmyjb.png"
+                  alt="Graphic"
+                  style={{ height: "9cm" }}
+                />
+              </div>
+            </div>
+
+            <div
+              ref={(ref) => cardRefs.current.push(ref)}
+              className="demo-card visible demo-card--step2"
+              style={{
+                width: "500px",
+                height: "500px",
+                marginLeft: "4cm",
+                marginLeft: "50%",
+                marginTop: "6cm",
+              }}
+            >
+              <div className="head">
+                <div className="number-box">
+                  <span>02</span>
+                </div>
+                <h2>
+                  <span className="small"></span>{" "}
+                  <p style={{ color: "white", marginTop: "0.5cm" }}>
+                    CÁLCULO DE LA QFT (QUANTUM FOURIER TRANSFORM).
+                  </p>
+                </h2>
+              </div>
+              <div className="body">
+                <p>
+                  La Transformada de Fourier Cuántica (QFT) es un algoritmo
+                  cuántico que calcula de manera eficiente la transformada
+                  discreta de Fourier en estados cuánticos. Utiliza compuertas
+                  cuánticas para mapear las amplitudes de los estados de entrada
+                  a las amplitudes de sus componentes de Fourier. La QFT es
+                  esencial en varios algoritmos cuánticos y tiene aplicaciones
+                  en teoría de números, procesamiento de señales y simulación.
+                </p>
+                <img
+                  src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687432769/BeFunky-collage_1_grcmvg.png"
+                  alt="Graphic"
+                  style={{ height: "9cm" }}
+                />
+              </div>
+            </div>
+
+            <div
+              ref={(ref) => cardRefs.current.push(ref)}
+              className="demo-card visible demo-card--step3"
+              style={{
+                width: "500px",
+                height: "500px",
+                marginLeft: "4cm",
+                marginLeft: "15%",
+                marginTop: "6cm",
+              }}
+            >
+              <div className="head">
+                <div className="number-box">
+                  <span>03</span>
+                </div>
+                <h2 style={{ color: "white" }}>
+                  <span className="small">Algoritmos</span>{" "}
+                  <p style={{ color: "white" }}>Criptosasun</p>
+                </h2>
+              </div>
+              <div className="body">
+                <p>
+                  Criptosasun, hemos logrado transponer algoritmos cuánticos a
+                  redes neuronales y hemos demostrado su capacidad para
+                  descifrar claves privadas RSA en un plazo de semanas. A pesar
+                  de las limitaciones actuales de los ordenadores cuánticos, que
+                  requieren varios años más de desarrollo, en Criptosasun hemos
+                  logrado resultados prometedores utilizando un algoritmo
+                  específico en ordenadores clásicos.
+                </p>
+                <img
+                  src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687434618/5d77cb0389fd0f22fa625b45_cryptosasun-icons-brain_1_fgk3f0.png"
+                  alt="Graphic"
+                  style={{ height: "9cm" }}
+                />
+              </div>
+            </div>
+
+            <div
+              ref={(ref) => cardRefs.current.push(ref)}
+              className="demo-card visible demo-card--step4"
+              style={{
+                width: "500px",
+                height: "500px",
+                marginLeft: "4cm",
+                marginLeft: "50%",
+                marginTop: "6cm",
+              }}
+            >
+              <div className="head">
+                <div className="number-box">
+                  <span>04</span>
+                </div>
+                <h2>
+                  <span className="small">Subtitle</span> Consistency
+                </h2>
+              </div>
+              <div className="body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Soluta reiciendis deserunt doloribus consequatur, laudantium
+                  odio dolorum laboriosam.
+                </p>
+                <img
+                  src="http://placehold.it/1000x500"
+                  alt="Graphic"
+                  style={{ height: "9cm" }}
+                />
+              </div>
+            </div>
+
+            <div
+              ref={(ref) => cardRefs.current.push(ref)}
+              className="demo-card visible demo-card--step5"
+              style={{
+                width: "500px",
+                height: "500px",
+                marginLeft: "4cm",
+                marginLeft: "15%",
+                marginTop: "6cm",
+              }}
+            >
+              <div className="head">
+                <div className="number-box">
+                  <span>05</span>
+                </div>
+                <h2 style={{ color: "white" }}>
+                  <span className="small">Subtitle</span> Conversion
+                </h2>
+              </div>
+              <div className="body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Soluta reiciendis deserunt doloribus consequatur, laudantium
+                  odio dolorum laboriosam.
+                </p>
+                <img
+                  src="http://placehold.it/1000x500"
+                  alt="Graphic"
+                  style={{ height: "9cm" }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <div className="fixed-image">
         <div className="text">
