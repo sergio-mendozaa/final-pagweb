@@ -261,6 +261,16 @@ export const Contactanos = () => {
 
     return () => cardRefs.current.forEach((ref) => observer.unobserve(ref));
   }, []);
+
+  window.addEventListener("scroll", function () {
+    const form = document.getElementById("contact-form");
+    const top = form.getBoundingClientRect().top;
+
+    if (top <= window.innerHeight) {
+      form.classList.add("active");
+    }
+  });
+
   return (
     <>
       <div className="loader-wrap">
@@ -379,12 +389,17 @@ export const Contactanos = () => {
             marginBottom: "4cm",
             paddingTop: "5cm",
             paddingBottom: "5cm",
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
-          <div className="text" style={{ width: "43%", marginLeft: "3cm" }}>
-            <h2 style={{ marginLeft: "4cm" }}>Descubre</h2>
-            <h3 style={{ color: "#7B8FA1", marginLeft: "4cm" }}>
-              Que te ofrecemos
+          <div
+            className="text"
+            style={{ width: "43%", marginLeft: "3cm", marginTop: "1.5cm" }}
+          >
+            <h2 style={{ marginLeft: "4cm" }}>Estamos </h2>
+            <h3 style={{ color: "#7B8FA1", marginLeft: "5.5cm" }}>
+              aquí para ti
             </h3>
             <div>
               <i
@@ -393,26 +408,58 @@ export const Contactanos = () => {
               ></i>
             </div>
             <p style={{ textAlign: "center" }}>
-              Bienvenidos a nuestra línea de tiempo de noticias, una innovadora
-              representación de nuestro viaje a través del tiempo. Aquí, la
-              historia de nuestra empresa se despliega en una sucesión lineal,
-              trazando el recorrido de nuestras noticias, acontecimientos e
-              informes inportantes de una manera clara y ordenada. Cada hito,
-              cada triunfo, cada pieza de nuestro legado se despliega con
-              elegancia a lo largo del eje del tiempo. Al sumergirse en este
-              recorrido, serán guiados de manera cronológica, desde nuestros
-              inicios hasta el presente, explorando los puntos de inflexión que
-              han definido nuestro camino. Es nuestro placer invitarlos a
-              desplazarse a través de este viaje en el tiempo, a experimentar
-              nuestra historia tal como se ha desarrollado, en todo su esplendor
-              cronológico.
+              A tu derecha, encontrarás nuestro formulario de contacto. Es un
+              camino rápido y sencillo para ponerte en contacto con nosotros.
+              Solo necesitas proporcionarnos tu nombre, correo electrónico, el
+              asunto de tu consulta y el mensaje que deseas enviarnos. Nos
+              esforzamos por responder a todas las consultas en un plazo de 24
+              horas. Esperamos tener noticias tuyas pronto.
             </p>
+          </div>
+          <div className="form-container" id="contact-form">
+            <form method="POST">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nombre"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Correo electrónico"
+                required
+              />
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Asunto"
+                required
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Mensaje"
+                required
+              ></textarea>
+              <input type="submit" value="Enviar" />
+            </form>
           </div>
         </section>
       </div>
-      <div className="fixed-image-ordenador">
-        <div className="text"></div>
-      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.7667268277746!2d-7.006639490209803!3d38.88357861138347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd16e474ee035b59%3A0xc75969aff5d6aa87!2sEscuela%20de%20Ingenier%C3%ADas%20Industriales!5e0!3m2!1ses!2ses!4v1687540841718!5m2!1ses!2ses"
+        width="1878"
+        height="430"
+        style={{ border: "0" }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
 
       <footer>
         <div className="text">

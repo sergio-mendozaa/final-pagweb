@@ -1410,3 +1410,53 @@ body {
 .demo-card--step5 {
   background-color: #000000;
 }
+/* Configuración general del formulario */
+.form-container {
+  background-color: black;
+  padding: 60px 20px 60px 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px gray;
+  width: 40%;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Configuración de los inputs del formulario */
+.form-container form input,
+.form-container form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Configuración de los placeholders */
+.form-container form input::placeholder,
+.form-container form textarea::placeholder {
+  color: gray;
+}
+
+/* Configuración del botón de envío */
+.form-container form input[type="submit"] {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+
+/* Configuración de la animación al hacer scroll */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.form-container.active {
+  animation: 2s ease-out 0s 1 slideInFromRight;
+  opacity: 1;
+}
