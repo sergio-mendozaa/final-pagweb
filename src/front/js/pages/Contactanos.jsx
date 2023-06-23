@@ -387,8 +387,9 @@ export const Contactanos = () => {
           id="timeline"
           style={{
             marginBottom: "4cm",
-            paddingTop: "5cm",
-            paddingBottom: "5cm",
+            marginTop: "-1cm",
+            paddingTop: "3cm",
+            paddingBottom: "3cm",
             display: "flex",
             justifyContent: "space-between",
           }}
