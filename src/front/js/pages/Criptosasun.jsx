@@ -1,12 +1,24 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-import "../../styles/home.css";
-import imagen1 from "/workspace/final-pagweb/src/front/img/annie-spratt-vGgn0xLdy8s-unsplash (1).jpg";
-import imagen2 from "/workspace/final-pagweb/src/front/img/ryoji-iwata-IBaVuZsJJTo-unsplash (2).jpg";
-
-export const Home = () => {
+import "../../styles/criptosasun.css";
+export const Criptosasun = () => {
   const { store, actions } = useContext(Context);
+  const cardRefs = useRef([]);
+  const textAnimation = useRef(null);
+
+  const setAnimationName = (element, animationName) => {
+    if (element) {
+      element.style.animationName = animationName;
+    }
+  };
+
+  const restartAnimation = () => {
+    setAnimationName(textAnimation.current, "none");
+    requestAnimationFrame(() =>
+      setTimeout(() => setAnimationName(textAnimation.current, ""), 0)
+    );
+  };
   useEffect(() => {
     const body = document.querySelector("body");
     const loader = document.querySelector(".loader-wrap");
@@ -246,7 +258,32 @@ export const Home = () => {
       window.addEventListener("click", boxModelFun);
       boxModelArrow.addEventListener("click", boxModelFun);
     }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cardRefs.current.forEach((ref) => observer.observe(ref));
+
+    return () => cardRefs.current.forEach((ref) => observer.unobserve(ref));
   }, []);
+
+  window.addEventListener("scroll", function () {
+    const form = document.getElementById("contact-form");
+
+    if (top <= window.innerHeight) {
+      form.classList.add("active");
+    }
+  });
+
   return (
     <>
       <div className="loader-wrap">
@@ -263,16 +300,17 @@ export const Home = () => {
           <span className="loader-item"></span>
         </div>
       </div>
+      
       <div className="dots">
         <div className="active one" data-x="header"></div>
         <div className="two" data-x=".recipes"></div>
         <div className="three" data-x=".fixed-image"></div>
       </div>
-      <header className="header-primera-pagina">
+      <header className="header-cuarta-pagina">
         <nav>
           <div className="logo">
             <Link to="/">
-              <h4 style={{ color: "black", fontSize: "259%" }}>Criptosasun</h4>
+              <h4 style={{ color: "white", fontSize: "259%" }}>Criptosasun</h4>
             </Link>
           </div>
           <div className="toggle">
@@ -298,9 +336,10 @@ export const Home = () => {
 
               <li>
                 <Link to="/contactanos">
-                  Contáctanos<span className="underline"></span>
+                  Contactanos<span className="underline"></span>
                 </Link>
               </li>
+
               <li>
                 <Link to="/criptosasun">
                   Criptosasun<span className="underline"></span>
@@ -309,18 +348,25 @@ export const Home = () => {
             </ul>
           </div>
         </nav>
-        <div className="text" style={{ marginTop: "5%" }}>
-          <h2>Welcome</h2>
-          <h1>CRIPTOSASUN</h1>
-          <div className="arrow">
-            <span className="left"></span>
-            <i className="fas fa-asterisk"></i>
-            <span className="right"></span>
-          </div>
-          <span>¿Listo para formar parte de nuestra familia?</span>
-          <div className="button">
-            <button>Explore</button>
-          </div>
+        <div style={{ marginTop: "18%" }}>
+          <main className="text-container">
+            <svg
+              className="text-stroke"
+              viewBox="0 0 500 100"
+              width="80%"
+              height="100%"
+              ref={textAnimation}
+            >
+              <text
+                className="text"
+                x="25"
+                y="75"
+                style={{ borderColor: "white" }}
+              >
+                Criptosasun
+              </text>
+            </svg>
+          </main>
         </div>
 
         <svg
@@ -342,60 +388,10 @@ export const Home = () => {
         </svg>
         <div className="arrow-down"></div>
       </header>
-      <div className="about-us">
-        <div className="text" style={{ marginTop: "7%" }}>
-          <h2>Descubre</h2>
-          <h3 style={{ color: "#7B8FA1" }}>nuestra historia </h3>
-          <div>
-            <i className="fas fa-asterisk"></i>
-          </div>
-          <p>
-            CryptoSasun Energía es una empresa altamente competente. Nuestro
-            enfoque innovador nos permite desarrollar soluciones vanguardistas
-            que transforman la industria. Además lo que nos distingue es nuestro
-            espíritu cercano y trabajador. En CryptoSasun, valoramos y cuidamos
-            de cada miembro de nuestra comunidad, creando un ambiente de trabajo
-            colaborativo y altamamente provechoso. Estamos comprometidos en
-            brindar servicios de calidad y generar un impacto positivo en la
-            vida de las personas y empresas.
-          </p>
-          <div>
-            <a className="a-CTA" href="#">
-              About Us
-            </a>
-          </div>
-        </div>
-        <div className="image-container">
-          <div className="image image1">
-            <img
-              src={imagen2}
-              alt="Food Photo"
-              style={{ height: "643px", width: "422px" }}
-            />
-          </div>
-          <div className="image image2">
-            <img
-              src={imagen1}
-              alt="Food Photo"
-              style={{ height: "643px", width: "422px" }}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="recipes">
-        <div className="image"></div>
-        <div className="text">
-          <h2 style={{ marginLeft: "1.5cm", fontSize: "130%" }}>
-            ¿Necesitas ayuda?{" "}
-          </h2>
-          <h3 style={{ fontSize: "180%", marginLeft: "1cm" }}>
-            ¡Qué podemos hacer!
-          </h3>
-        </div>
-      </div>
+
       <div className="menu">
         <div className="box-model">
-          <i className="fas fa-times fa-2x close"></i>
+          <i className="fas fa-times fa-2x "></i>
           <div className="arrow">
             <div className="arrow arrow-right"></div>
             <div className="arrow arrow-left"></div>
@@ -406,115 +402,182 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="menu-image-container">
-          <div className="image active">
-            <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_A_closeup_of_a_complex_FPGA_chip_illuminated_by_0_1_dc6fej.jpg"
-              alt="Food Photo"
-              style={{ height: "264px", width: "500px" }}
-            />
+      </div>
+      <div className="diagramatiempo">
+        <section
+          id="timeline"
+          style={{
+            marginBottom: "4cm",
+            marginTop: "-1cm",
+            paddingTop: "3cm",
+            paddingBottom: "3cm",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <div style={{ marginLeft: "20%" }}>
+            <h5>
+              “Todo el mundo sabe que algunas cosas son simplemente imposibles,
+              hasta que alguien que no sabe eso las hace posibles”
+            </h5>
+            <p style={{ marginLeft: "47%" }}>Albert Einstein</p>
           </div>
-          <div className="image">
-            <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777748/kanchanara-5hcV51EeeWc-unsplash_1_cg4kpb.jpg"
-              alt="Food Photo"
-            />
+        </section>
+      </div>
+      <div className="recipescripto">
+        <div className="image" style={{ marginTop: "4cm" }}>
+          <div className="textfoto">
+            <h1
+              style={{
+                fontSize: "125%",
+                color: "black",
+                position: "relative",
+                top: "2cm",
+                left: "0.3cm",
+              }}
+            >
+              ¿Quieres saber más de nosotros?
+            </h1>
+            <p
+              style={{
+                float: "left",
+                width: "30%",
+                marginLeft: "1cm",
+                bottom: "6cm",
+                position: "relative",
+                top: "3cm",
+                textAlign: "center",
+                alignItems: "center",
+                justifyContent: "center",
+                marginRight: "34%",
+              }}
+            >
+              Criptosasun es una empresa líder en el campo de la Criptología y
+              Ciberseguridad. Con un equipo altamente capacitado de expertos en
+              seguridad informática y criptografía, brindamos soluciones
+              robustas y avanzadas para proteger la información confidencial de
+              nuestros clientes. Nuestra experiencia en la implementación de
+              sistemas seguros y en el desarrollo de estrategias de mitigación
+              de riesgos nos permite ofrecer soluciones adaptadas a las
+              necesidades específicas de cada cliente. En Criptosasun, nos
+              enorgullece mantenernos a la vanguardia de las últimas tendencias
+              y tecnologías en seguridad cibernética, garantizando la protección
+              de los datos en un entorno digital cada vez más
+              complejo.Criptosasun es una empresa líder en el campo de la
+              Criptología y Ciberseguridad. Con un equipo altamente capacitado
+              de expertos en seguridad informática y criptografía, brindamos
+              soluciones robustas y avanzadas para proteger la información
+              confidencial de nuestros clientes. Nuestra experiencia en la
+              implementación de sistemas seguros y en el desarrollo de
+              estrategias de mitigación de riesgos nos permite ofrecer
+              soluciones adaptadas a las necesidades específicas de cada
+              cliente. En Criptosasun, nos enorgullece mantenernos a la
+              vanguardia de las últimas tendencias y tecnologías en seguridad
+              cibernética, garantizando la protección de los datos en un entorno
+              digital cada vez más complejo.
+            </p>
+            <h1
+              style={{
+                fontSize: "125%",
+                color: "black",
+                position: "relative",
+                top: "1cm",
+                left: "1cm",
+              }}
+            >
+              Sigue descubriendo , adelante
+            </h1>
+            <p
+              style={{
+                float: "left",
+                width: "30%",
+                marginLeft: "1cm",
+                bottom: "6cm",
+                position: "relative",
+                top: "2cm",
+                textAlign: "center",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              Criptosasun, una empresa líder en el campo del Big Data e
+              Inteligencia Artificial, se destaca como un edificio bien
+              construido en el mundo de la tecnología. Al igual que los
+              cimientos sólidos y las estructuras bien diseñadas de un edificio,
+              en Criptosasun contamos con un equipo excepcional de científicos
+              de datos y expertos en IA que utilizan tecnologías de vanguardia
+              para analizar grandes volúmenes de información. Nuestro enfoque se
+              basa en la precisión de los análisis y la generación de
+              conocimientos valiosos para nuestros clientes. Al igual que un
+              edificio bien construido proporciona estabilidad y confianza, en
+              Criptosasun brindamos soluciones personalizadas que permiten a las
+              empresas tomar decisiones informadas y optimizar sus procesos. A
+              través de análisis de datos precisos y modelos predictivos,
+              ayudamos a nuestros clientes a desbloquear el potencial oculto en
+              sus datos, impulsando el crecimiento y el éxito empresarial en la
+              era digital. En Criptosasun, nos enorgullece nuestra dedicación a
+              la innovación y la excelencia en el manejo de datos. Nos
+              esforzamos por mantenernos a la vanguardia de las últimas
+              tendencias y tecnologías en el campo del Big Data e Inteligencia
+              Artificial, asegurando que nuestros clientes obtengan soluciones
+              de vanguardia que les permitan destacarse en su industria.
+            </p>
           </div>
-          <div className="image">
-            <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_Una_escena_de_ciberespacio_digital_con_estructu_1_1_f6xg5k.jpg"
-              alt="Food Photo"
-              style={{}}
-            />
-          </div>
-          <div className="image">
-            <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_Big_Data_e_Inteligencia_Artificial_0_1_kmsqyw.jpg"
-              alt="Food Photo"
-            />
-          </div>
-        </div>
-        <div className="text" style={{ marginTop: "3%" }}>
-          <h2>Descubre</h2>
-          <h3 style={{ color: "#7B8FA1" }}>Que te ofrecemos</h3>
-          <div>
-            <i className="fas fa-asterisk"></i>
-          </div>
-          <p>
-            En CriptoSasun, ofrecemos una amplia gama de servicios diseñados
-            para satisfacer las necesidades de nuestros clientes. Desde
-            soluciones tecnológicas innovadoras hasta atención personalizada,
-            nos esforzamos por brindar la mejor experiencia posible. Uno de
-            nuestros objetivos principales es ayudar a nuestros clientes a
-            alcanzar sus metas , superar sus expectativas, poder ahorrar... Para
-            obtener más información sobre lo que ofrecemos y cómo podemos
-            ayudarle, lo invitamos a explorar nuestro sitio web, donde
-            encontrará detalles completos sobre nuestros productos, y recursos
-            informativos. No pierda la oportunidad de descubrir cómo podemos
-            mejorar su vida o negocio. ¡Infórmese ahora y déjenos ser su socio
-            de confianza en el camino hacia el éxito!
-          </p>
-          <div>
-            <a className="a-CTA" href="#">
-              Contáctanos
-            </a>
-          </div>
+          <div style={{ clear: "both" }}></div>
         </div>
       </div>
-      <div className="fixed-image">
-        <div className="text">
-          <h2>La combinación</h2>
-          <h3 style={{ marginBottom: "3cm" }}>Perfecta</h3>
-        </div>
-      </div>
-      <div className="reservation">
-        <div className="text" style={{ marginTop: "2%" }}>
-          <h2>Algoritmos</h2>
-          <h3 style={{ color: "#7B8FA1" }}>Clásicos vs Cuánticos</h3>
-          <div>
-            <i className="fas fa-asterisk"></i>
-          </div>
-          <p>
-            Un algoritmo es una secuencia de pasos o instrucciones bien
-            definidas que resuelven un problema o realizan una tarea específica.
-            En el contexto de la informática, los algoritmos son fundamentales
-            para el procesamiento de datos y la toma de decisiones en diferentes
-            aplicaciones.Podemos distinguir 2 tipos Algoritmos, clásicos que son
-            aquellos diseñados para ejecutarse en computadoras tradicionales
-            basadas en bits clásicos. Utilizan operaciones lógicas y aritméticas
-            para realizar cálculos. Son ampliamente utilizados en todas las
-            áreas de la informática, desde cálculos matemáticos hasta búsquedas
-            en bases de datos y algoritmos de ordenamiento y los Algoritmos
-            cuánticos que se basan en los principios de la mecánica cuántica y
-            utilizan qubits, que son la unidad básica de información cuántica.
-            Aprovechan las propiedades únicas de los qubits, como la
-            superposición y el entrelazamiento, para realizar cálculos de manera
-            más eficiente en ciertos problemas específicos. Los algoritmos
-            cuánticos tienen el potencial de resolver problemas complejos, como
-            la factorización de números grandes y la búsqueda en grandes
-            conjuntos de datos, de manera más rápida que los algoritmos
-            clásicos.
-          </p>
-          <div>
-            <a className="a-CTA" href="#">
-              Make a Reservation
-            </a>
-          </div>
-        </div>
-        <div className="image-container" style={{ marginTop: "3%" }}>
-          <div className="image image1">
-            <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687192800/karl-pawlowicz-QUHuwyNgSA0-unsplash_1_vaxwbn.jpg"
-              alt="Food Photo"
-              style={{ height: "15cm", width: "12cm" }}
-            />
-          </div>
-          <div className="image image2">
-            <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687192684/DreamShaper_v5_Algoritmo_cuntico_Para_representar_un_algoritmo_0_1_hopgxu.jpg"
-              alt="Food Photo"
-              style={{ height: "15cm", width: "12cm" }}
-            />
+      <div className="apartadocripto">
+        <div
+          className="fotosnoticias"
+          style={{ marginTop: "2cm", marginBottom: "2cm" }}
+        >
+          <div className="image-container">
+            <div className="image-part image-left-cripto"></div>
+            <div className="image-part image-middle">
+              <div className="text">
+                <h2
+                  style={{
+                    marginLeft: "0.3cm",
+                    marginBottom: "-1%",
+                    fontSize: "35px",
+                  }}
+                >
+                  Aqui tienes toda nuestra información
+                </h2>
+                <h3
+                  style={{
+                    fontSize: "150%",
+                    marginLeft: "1.5cm",
+                    color: "#7B8FA1",
+                  }}
+                >
+                  ¡A qué estas esperando!
+                </h3>
+                <p
+                  style={{
+                    height: "5cm",
+                    width: "15cm",
+                    textAlign: "center",
+                    marginLeft: "0.5cm",
+                  }}
+                >
+                  Criptosasun es una empresa versátil que abarca múltiples
+                  áreas, incluyendo Finanzas, Farmacia y Salud, Ingeniería y
+                  Materiales, y Algoritmos Cuánticos vs. Clásicos. Con nuestra
+                  amplia experiencia y conocimientos en estos campos, brindamos
+                  soluciones adaptadas a las necesidades específicas de cada
+                  industria. Ya sea en el asesoramiento financiero y la gestión
+                  de inversiones, la mejora de la atención médica y los avances
+                  en materiales de ingeniería, o la exploración de las
+                  capacidades de los algoritmos cuánticos frente a los clásicos,
+                  en Criptosasun nos enorgullece marcar la diferencia. Nuestro
+                  enfoque orientado a la excelencia y la innovación nos permite
+                  proporcionar soluciones integrales y de vanguardia que
+                  impulsan el crecimiento y el éxito de nuestros clientes.
+                </p>
+              </div>
+            </div>
+            <div className="image-part image-right-cripto"></div>
           </div>
         </div>
       </div>

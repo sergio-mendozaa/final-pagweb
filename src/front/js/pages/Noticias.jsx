@@ -317,9 +317,9 @@ export const Noticias = () => {
               </li>
 
               <li>
-                <a href="#">
+                <Link to="/criptosasun">
                   Criptosasun<span className="underline"></span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

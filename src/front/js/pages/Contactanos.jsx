@@ -327,16 +327,16 @@ export const Contactanos = () => {
               </li>
 
               <li>
-                <a href="#">
+                <Link to="/criptosasun">
                   Criptosasun<span className="underline"></span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </nav>
         <div className="text" style={{ marginTop: "5%" }}>
           <h2>Contáctanos</h2>
-          <h1>De manera fácil, sencilla y rápida</h1>
+          <h1>De manera fácil, rápida y sencilla</h1>
           <div className="arrow">
             <span className="left"></span>
             <i className="fas fa-asterisk"></i>
