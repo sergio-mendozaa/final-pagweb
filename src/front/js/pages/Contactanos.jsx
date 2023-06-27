@@ -296,7 +296,15 @@ export const Contactanos = () => {
         <nav>
           <div className="logo">
             <Link to="/">
-              <h4 style={{ color: "black", fontSize: "259%" }}>Criptosasun</h4>
+              <h4
+                style={{
+                  color: "black",
+                  fontSize: "259%",
+                  fontFamily: "'Satoshi', sans-serif",
+                }}
+              >
+                Criptosasun
+              </h4>
             </Link>
           </div>
           <div className="toggle">

@@ -29,14 +29,14 @@ img {
   max-width: 100%;
 }
 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-size: 120px;
   font-weight: normal;
   margin: 0 0 -55px;
 }
 h1,
 h3 {
-  font-family: "Source Code Pro", sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-size: 47px;
   font-weight: bold;
   letter-spacing: 9.4px;
@@ -63,7 +63,7 @@ input,
 .copyright li,
 .contact .form form label,
 .contact .form form button {
-  font-family: Cabin, sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 .fa-asterisk,
 .a-CTA,
@@ -1276,7 +1276,7 @@ footer .newsletter i {
 }
 /*End Home Page Responsive*/
 body {
-  font-family: Roboto;
+  font-family: "Satoshi", sans-serif;
 }
 
 #timeline {

@@ -272,7 +272,15 @@ export const Home = () => {
         <nav>
           <div className="logo">
             <Link to="/">
-              <h4 style={{ color: "black", fontSize: "259%" }}>Criptosasun</h4>
+              <h4
+                style={{
+                  color: "black",
+                  fontSize: "259%",
+                  fontFamily: "'Satoshi', sans-serif",
+                }}
+              >
+                Criptosasun
+              </h4>
             </Link>
           </div>
           <div className="toggle">
@@ -406,31 +414,58 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="menu-image-container">
+        <div className="menu-image-container" style={{}}>
           <div className="image active">
             <img
               src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_A_closeup_of_a_complex_FPGA_chip_illuminated_by_0_1_dc6fej.jpg"
               alt="Food Photo"
-              style={{ height: "264px", width: "500px" }}
+              style={{
+                height: "264px",
+                width: "500px",
+                borderRadius: "20px",
+                border: "8px solid #C0C0C0",
+                position: "relative",
+              }}
             />
           </div>
-          <div className="image">
+
+          <div className="card">
             <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777748/kanchanara-5hcV51EeeWc-unsplash_1_cg4kpb.jpg"
-              alt="Food Photo"
+              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_A_closeup_of_a_complex_FPGA_chip_illuminated_by_0_1_dc6fej.jpg"
+              className="card-image"
             />
+            <div className="card-body">
+              <h1 className="card-titule">Materiales</h1>
+
+              <p className="card-info" style={{ color: "white" }}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae praesentium ea necessitatibus, distinctio quos facere.
+                At harum quia non corporis.
+              </p>
+              <button className="card-btn">saber más</button>
+            </div>
           </div>
+
           <div className="image">
             <img
               src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_Una_escena_de_ciberespacio_digital_con_estructu_1_1_f6xg5k.jpg"
               alt="Food Photo"
-              style={{}}
+              style={{
+                borderRadius: "20px",
+                border: "8px solid #C0C0C0",
+                position: "relative",
+              }}
             />
           </div>
           <div className="image">
             <img
               src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_Big_Data_e_Inteligencia_Artificial_0_1_kmsqyw.jpg"
               alt="Food Photo"
+              style={{
+                borderRadius: "20px",
+                border: "8px solid #C0C0C0",
+                position: "relative",
+              }}
             />
           </div>
         </div>
@@ -518,6 +553,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
       <footer>
         <div className="text">
           <h2>ABOUT CriptoSasun</h2>
