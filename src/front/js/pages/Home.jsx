@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
+import Carga from "../component/Carga.jsx";
 import imagen1 from "/workspace/final-pagweb/src/front/img/annie-spratt-vGgn0xLdy8s-unsplash (1).jpg";
 import imagen2 from "/workspace/final-pagweb/src/front/img/ryoji-iwata-IBaVuZsJJTo-unsplash (2).jpg";
 
@@ -249,20 +250,7 @@ export const Home = () => {
   }, []);
   return (
     <>
-      <div className="loader-wrap">
-        <div className="loader">
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-        </div>
-      </div>
+      <Carga />
       <div className="dots">
         <div className="active one" data-x="header"></div>
         <div className="two" data-x=".recipes"></div>

@@ -1,0 +1,43 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.loader-items {
+  display: flex;
+  align-items: center;
+}
+
+.loader-item {
+  width: 10px;
+  height: 30px;
+  background-color: #fff;
+  margin: 0 5px;
+  animation: loader-animation 1s infinite;
+}
+
+.loading-text {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@keyframes loader-animation {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}

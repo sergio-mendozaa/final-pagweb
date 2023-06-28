@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/noticias.css";
+import Carga from "../component/Carga.jsx";
 export const Noticias = () => {
   const { store, actions } = useContext(Context);
   const cardRefs = useRef([]);
@@ -263,20 +264,7 @@ export const Noticias = () => {
   }, []);
   return (
     <>
-      <div className="loader-wrap">
-        <div className="loader">
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-          <span className="loader-item"></span>
-        </div>
-      </div>
+    <Carga/>
       <div className="dots">
         <div className="active one" data-x="header"></div>
         <div className="two" data-x=".recipes"></div>
