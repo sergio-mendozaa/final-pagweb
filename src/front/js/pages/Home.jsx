@@ -353,7 +353,7 @@ export const Home = () => {
       <div className="about-us">
         <div className="text" style={{ marginTop: "7%" }}>
           <h2>Descubre</h2>
-          <h3 style={{ color: "#7B8FA1" }}>nuestra historia </h3>
+          <h3 style={{ color: "#7B8FA1" }}>algo sobre nosotros </h3>
           <div>
             <i className="fas fa-asterisk"></i>
           </div>
@@ -367,11 +367,7 @@ export const Home = () => {
             brindar servicios de calidad y generar un impacto positivo en la
             vida de las personas y empresas.
           </p>
-          <div>
-            <a className="a-CTA" href="#">
-              About Us
-            </a>
-          </div>
+          <hr></hr>
         </div>
         <div className="image-container">
           <div className="image image1">
@@ -414,22 +410,8 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="menu-image-container" style={{}}>
-          <div className="image active">
-            <img
-              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_A_closeup_of_a_complex_FPGA_chip_illuminated_by_0_1_dc6fej.jpg"
-              alt="Food Photo"
-              style={{
-                height: "264px",
-                width: "500px",
-                borderRadius: "20px",
-                border: "8px solid #C0C0C0",
-                position: "relative",
-              }}
-            />
-          </div>
-
-          <div className="card">
+        <div className="menu-image-container">
+          <div className="card" style={{ margin: "5px" }}>
             <img
               src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_A_closeup_of_a_complex_FPGA_chip_illuminated_by_0_1_dc6fej.jpg"
               className="card-image"
@@ -438,38 +420,77 @@ export const Home = () => {
               <h1 className="card-titule">Materiales</h1>
 
               <p className="card-info" style={{ color: "white" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae praesentium ea necessitatibus, distinctio quos facere.
-                At harum quia non corporis.
+                Materiales cada vez mas potentes y avanzados como los FPGA y
+                placas base superpotentes que transforman la industria con
+                flexibilidad y rendimiento excepcional. Impulsan avances en
+                inteligencia artificial, computación de alto rendimiento y
+                robótica, abriendonos posibilidades innovadoras en múltiples
+                campos.
               </p>
-              <button className="card-btn">saber más</button>
             </div>
           </div>
 
-          <div className="image">
+          <div className="card" style={{ margin: "5px" }}>
+            <img
+              src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777748/kanchanara-5hcV51EeeWc-unsplash_1_cg4kpb.jpg"
+              className="card-image"
+            />
+            <div className="card-body">
+              <h1 className="card-titule">Finanzas</h1>
+
+              <p className="card-info" style={{ color: "white" }}>
+                Brindanmos soluciones innovadoras para maximizar tus activos y
+                proteger tu futuro. Con enfoque centrado en el cliente,
+                ofrecemos productos personalizados y estrategias de inversión
+                inteligentes. Únete a nosotros para alcanzar tus metas
+                financieras y descubre cómo transformamos la manera en que
+                gestionas tu dinero.
+              </p>
+            </div>
+          </div>
+
+          <div className="card" style={{ margin: "5px" }}>
             <img
               src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_Una_escena_de_ciberespacio_digital_con_estructu_1_1_f6xg5k.jpg"
-              alt="Food Photo"
-              style={{
-                borderRadius: "20px",
-                border: "8px solid #C0C0C0",
-                position: "relative",
-              }}
+              className="card-image"
             />
+            <div className="card-body">
+              <h1 className="card-titule" style={{ marginTop: "1cm" }}>
+                Criptología y Ciberseguridad
+              </h1>
+
+              <p className="card-info" style={{ color: "white" }}>
+                Ofrecemos y estudiamos soluciones innovadoras para proteger tus
+                datos confidenciales. Con tecnologías de cifrado avanzadas y
+                protocolos de protección robustos, garantizamos la seguridad de
+                tus comunicaciones digitales. Únete a nosotros y descubre cómo
+                revolucionamos la protección de la información en el mundo
+                digital.
+              </p>
+            </div>
           </div>
-          <div className="image">
+
+          <div className="card" style={{ margin: "5px" }}>
             <img
               src="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687777747/DreamShaper_v5_Big_Data_e_Inteligencia_Artificial_0_1_kmsqyw.jpg"
-              alt="Food Photo"
-              style={{
-                borderRadius: "20px",
-                border: "8px solid #C0C0C0",
-                position: "relative",
-              }}
+              className="card-image"
             />
+            <div className="card-body">
+              <h1 className="card-titule" style={{ marginTop: "1cm" }}>
+                Big Data e Inteligencia Artificial
+              </h1>
+
+              <p className="card-info" style={{ color: "white" }}>
+                Big Data y la IA revolucionan empresas. Big Data analiza grandes
+                volúmenes de datos para predecir, personalizar y optimizar. La
+                IA automatiza tareas y asiste con chatbots. Juntas, impulsan
+                aplicaciones revolucionarias como detección de fraudes y
+                recomendaciones personalizadas.
+              </p>
+            </div>
           </div>
         </div>
-        <div className="text" style={{ marginTop: "3%" }}>
+        <div className="text" style={{ marginTop: "5%" }}>
           <h2>Descubre</h2>
           <h3 style={{ color: "#7B8FA1" }}>Que te ofrecemos</h3>
           <div>
@@ -483,17 +504,13 @@ export const Home = () => {
             nuestros objetivos principales es ayudar a nuestros clientes a
             alcanzar sus metas , superar sus expectativas, poder ahorrar... Para
             obtener más información sobre lo que ofrecemos y cómo podemos
-            ayudarle, lo invitamos a explorar nuestro sitio web, donde
-            encontrará detalles completos sobre nuestros productos, y recursos
-            informativos. No pierda la oportunidad de descubrir cómo podemos
-            mejorar su vida o negocio. ¡Infórmese ahora y déjenos ser su socio
-            de confianza en el camino hacia el éxito!
+            ayudarle, lo invitamos a explorar nuestro sitio web y las imagenes
+            que tiene a su izquierda, donde encontrará detalles sobre nuestros
+            productos, y recursos informativos. No pierda la oportunidad de
+            descubrir cómo podemos mejorar su vida o negocio. ¡Infórmese ahora y
+            déjenos ser su socio de confianza en el camino hacia el éxito!
           </p>
-          <div>
-            <a className="a-CTA" href="#">
-              Contáctanos
-            </a>
-          </div>
+          <hr></hr>
         </div>
       </div>
       <div className="fixed-image">
@@ -514,8 +531,8 @@ export const Home = () => {
             definidas que resuelven un problema o realizan una tarea específica.
             En el contexto de la informática, los algoritmos son fundamentales
             para el procesamiento de datos y la toma de decisiones en diferentes
-            aplicaciones.Podemos distinguir 2 tipos Algoritmos, clásicos que son
-            aquellos diseñados para ejecutarse en computadoras tradicionales
+            aplicaciones.Podemos distinguir 2 tipos de Algoritmos, clásicos que
+            son aquellos diseñados para ejecutarse en computadoras tradicionales
             basadas en bits clásicos. Utilizan operaciones lógicas y aritméticas
             para realizar cálculos. Son ampliamente utilizados en todas las
             áreas de la informática, desde cálculos matemáticos hasta búsquedas
@@ -530,11 +547,7 @@ export const Home = () => {
             conjuntos de datos, de manera más rápida que los algoritmos
             clásicos.
           </p>
-          <div>
-            <a className="a-CTA" href="#">
-              Make a Reservation
-            </a>
-          </div>
+          <hr></hr>
         </div>
         <div className="image-container" style={{ marginTop: "3%" }}>
           <div className="image image1">

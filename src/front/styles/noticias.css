@@ -1275,8 +1275,9 @@ footer .newsletter i {
   }
 }
 /*End Home Page Responsive*/
-body {
-  font-family: "Satoshi", sans-serif;
+.diagramatiempo {
+  display: flex;
+  flex-direction: column;
 }
 
 #timeline {
@@ -1309,20 +1310,21 @@ body {
   left: 50%;
   border-left: 1px solid #bdbdbd;
 }
+
 .demo-card-wrapper {
   position: relative;
   padding: 50px 0;
-  /* Esto asume que tus tarjetas están centradas en la página.
-     Si no es el caso, puede que necesites ajustar los márgenes de las tarjetas. */
 }
+
 .line {
   position: absolute;
   top: 0;
-  left: 46.5%;
+  left: 50%;
   bottom: 0;
   width: 1px;
   background-color: black;
 }
+
 .demo-card {
   position: relative;
   display: block;
@@ -1330,12 +1332,16 @@ body {
   max-width: 94%;
   z-index: 2;
   opacity: 0;
-  transform: translate3d(0, 40px, 0);
+  transform: translate3d(-100px, 0, 0);
   animation-fill-mode: both;
-  animation-duration: 5s;
+  animation-duration: 1s;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .demo-card.visible {
-  animation-name: fadeInUp;
+  animation-name: fade-in;
 }
 
 .demo-card .head {
@@ -1391,22 +1397,13 @@ body {
   width: 100%;
 }
 
-/* Color of each step */
-.demo-card--step1 {
-  background-color: #000000;
-}
-
-.demo-card--step2 {
-  background-color: #7b8fa1;
-}
-
-.demo-card--step3 {
-  background-color: #000000;
-}
-
-.demo-card--step4 {
-  background-color: #7b8fa1;
-}
-.demo-card--step5 {
-  background-color: #000000;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

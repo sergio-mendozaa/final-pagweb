@@ -841,6 +841,7 @@ footer .newsletter i,
   background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/arrow-down.png")
     no-repeat center;
 }
+
 .recipescripto .image {
   height: 750px;
   background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687861188/BeFunky-collage_5_aomjc9.jpg")
@@ -848,6 +849,14 @@ footer .newsletter i,
   background-size: cover;
   margin-bottom: 3cm;
   margin-top: -1cm;
+}
+
+.recipescripto .textfoto {
+  display: flex;
+}
+
+.recipescripto .textfoto .demo-card {
+  margin-top: 6cm;
 }
 
 .image-left-cripto,

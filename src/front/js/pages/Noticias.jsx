@@ -445,7 +445,7 @@ export const Noticias = () => {
           </p>
         </div>
       </div>
-      <div className="diagramatiempo">
+      <div className="diagramatiempo" style={{ marginBottom: "10%" }}>
         <section id="timeline">
           <h1 style={{ color: "black" }}>Línea del tiempo </h1>
 
@@ -470,11 +470,11 @@ export const Noticias = () => {
                 <h2>
                   <span
                     className="small"
-                    style={{ color: "white", marginTop: "1%" }}
+                    style={{ color: "black", marginTop: "1%" }}
                   >
                     Desafío COVID19
                   </span>
-                  <p style={{ color: "white" }}>
+                  <p style={{ color: "black" }}>
                     Sistemas inteligentes de ventilación mecánica de alta
                     precisión
                   </p>
@@ -507,8 +507,8 @@ export const Noticias = () => {
               style={{
                 width: "500px",
                 height: "500px",
-                marginLeft: "4cm",
-                marginLeft: "50%",
+
+                marginLeft: "55%",
                 marginTop: "6cm",
               }}
             >
@@ -518,7 +518,7 @@ export const Noticias = () => {
                 </div>
                 <h2>
                   <span className="small"></span>{" "}
-                  <p style={{ color: "white", marginTop: "0.5cm" }}>
+                  <p style={{ color: "black", marginTop: "0.5cm" }}>
                     CÁLCULO DE LA QFT (QUANTUM FOURIER TRANSFORM).
                   </p>
                 </h2>
@@ -556,9 +556,9 @@ export const Noticias = () => {
                 <div className="number-box">
                   <span>03</span>
                 </div>
-                <h2 style={{ color: "white" }}>
+                <h2 style={{ color: "black" }}>
                   <span className="small">Algoritmos</span>{" "}
-                  <p style={{ color: "white" }}>Criptosasun</p>
+                  <p style={{ color: "black" }}>Criptosasun</p>
                 </h2>
               </div>
               <div className="body">
