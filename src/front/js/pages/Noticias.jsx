@@ -42,21 +42,6 @@ export const Noticias = () => {
     const pageTitle = document.querySelector("title");
 
     // remove loader
-    function fadeOutEffect() {
-      const fadeEffect = setInterval(function () {
-        if (!loader.style.opacity) {
-          loader.style.opacity = 1;
-        }
-        if (loader.style.opacity > 0) {
-          loader.style.opacity -= 0.4;
-        } else {
-          body.classList.remove("stop-scroll");
-          loader.classList.add("remove");
-          clearInterval(fadeEffect);
-        }
-      }, 100);
-    }
-    window.addEventListener("load", fadeOutEffect);
 
     // prevent links click hash
     links.forEach((link) =>
@@ -264,7 +249,7 @@ export const Noticias = () => {
   }, []);
   return (
     <>
-    <Carga/>
+      <Carga />
       <div className="dots">
         <div className="active one" data-x="header"></div>
         <div className="two" data-x=".recipes"></div>
