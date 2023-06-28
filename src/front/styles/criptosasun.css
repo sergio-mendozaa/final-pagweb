@@ -842,21 +842,12 @@ footer .newsletter i,
     no-repeat center;
 }
 
-.recipescripto .image {
-  height: 750px;
-  background: url("https://res.cloudinary.com/dwkb2dk5r/image/upload/v1687861188/BeFunky-collage_5_aomjc9.jpg")
-    fixed bottom;
-  background-size: cover;
-  margin-bottom: 3cm;
-  margin-top: -1cm;
-}
-
 .recipescripto .textfoto {
   display: flex;
 }
 
 .recipescripto .textfoto .demo-card {
-  margin-top: 6cm;
+  margin-top: 2cm;
 }
 
 .image-left-cripto,
