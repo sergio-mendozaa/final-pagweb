@@ -1110,3 +1110,9 @@ footer .newsletter i,
     padding: 60px 0 60px 20px;
   }
 }
+#timelinecripto {
+  padding: 100px 0;
+  background: black;
+  border-top: 1px solid rgba(191, 191, 191, 0.4);
+  border-bottom: 1px solid rgba(191, 191, 191, 0.4);
+}

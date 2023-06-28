@@ -1319,7 +1319,7 @@ footer .newsletter i {
 .line {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 47%;
   bottom: 0;
   width: 1px;
   background-color: black;
@@ -1401,6 +1401,19 @@ footer .newsletter i {
   0% {
     opacity: 0;
     transform: translate3d(-100px, 0, 0);
+  }
+  10% {
+    opacity: 0.1;
+    transform: translate3d(-90px, 0, 0);
+  }
+  20% {
+    opacity: 0.2;
+    transform: translate3d(-80px, 0, 0);
+  }
+  /* Agrega más puntos intermedios aquí */
+  90% {
+    opacity: 0.9;
+    transform: translate3d(-10px, 0, 0);
   }
   100% {
     opacity: 1;

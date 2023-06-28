@@ -502,7 +502,7 @@ export const Home = () => {
             soluciones tecnológicas innovadoras hasta atención personalizada,
             nos esforzamos por brindar la mejor experiencia posible. Uno de
             nuestros objetivos principales es ayudar a nuestros clientes a
-            alcanzar sus metas , superar sus expectativas, poder ahorrar... Para
+            alcanzar sus metas , superar sus expectativas, ahorrar... Para
             obtener más información sobre lo que ofrecemos y cómo podemos
             ayudarle, lo invitamos a explorar nuestro sitio web y las imagenes
             que tiene a su izquierda, donde encontrará detalles sobre nuestros

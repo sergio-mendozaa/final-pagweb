@@ -373,7 +373,7 @@ export const Noticias = () => {
             <div className="text">
               <h2
                 style={{
-                  marginLeft: "1cm",
+                  marginLeft: "0.5cm",
                   marginBottom: "-1%",
                   fontSize: "60px",
                 }}
@@ -424,24 +424,26 @@ export const Noticias = () => {
         </div>
 
         <div className="text" style={{ marginRight: "2.5cm" }}>
-          <h2>Descubre</h2>
-          <h3 style={{ color: "#7B8FA1" }}>Que te ofrecemos</h3>
+          <h2 style={{ fontSize: "70px" }}>Un Mundo de Información</h2>
+          <h3 style={{ color: "#7B8FA1", fontSize: "35px", marginTop: "1cm" }}>
+            Nuestras Noticias e Investigaciones al Alcance de tu Mano
+          </h3>
           <div>
             <i className="fas fa-asterisk"></i>
           </div>
           <p>
-            Bienvenidos a nuestra línea de tiempo de noticias, una innovadora
-            representación de nuestro viaje a través del tiempo. Aquí, la
-            historia de nuestra empresa se despliega en una sucesión lineal,
-            trazando el recorrido de nuestras noticias, acontecimientos e
-            informes inportantes de una manera clara y ordenada. Cada hito, cada
-            triunfo, cada pieza de nuestro legado se despliega con elegancia a
-            lo largo del eje del tiempo. Al sumergirse en este recorrido, serán
-            guiados de manera cronológica, desde nuestros inicios hasta el
-            presente, explorando los puntos de inflexión que han definido
-            nuestro camino. Es nuestro placer invitarlos a desplazarse a través
-            de este viaje en el tiempo, a experimentar nuestra historia tal como
-            se ha desarrollado, en todo su esplendor cronológico.
+            ¡Bienvenidos a nuestro emocionante nuevo lanzamiento! Estamos
+            encantados de presentarles nuestro sitio, donde podrán disfrutar de
+            una amplia variedad de noticias e investigaciones de alta calidad.
+            Este espacio está diseñado para brindarles información relevante,
+            precisa y actualizada sobre diversos temas relacionados con
+            Criptosasun. En nuestro sitio, encontrarán una selección
+            cuidadosamente curada de noticias y artículos que abarcan desde
+            avances tecnológicos hasta descubrimientos científicos, pasando por
+            tendencias en la industria y análisis profundos. Nuestro equipo de
+            expertos se ha dedicado a investigar y recopilar la información más
+            valiosa para asegurar que ustedes tengan acceso a contenido de
+            primera categoría.
           </p>
         </div>
       </div>
@@ -508,8 +510,8 @@ export const Noticias = () => {
                 width: "500px",
                 height: "500px",
 
-                marginLeft: "55%",
-                marginTop: "6cm",
+                marginLeft: "51%",
+                marginTop: "7cm",
               }}
             >
               <div className="head">

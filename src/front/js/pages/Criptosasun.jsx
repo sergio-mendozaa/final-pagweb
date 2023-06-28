@@ -413,7 +413,7 @@ export const Criptosasun = () => {
       </div>
       <div className="diagramatiempo">
         <section
-          id="timeline"
+          id="timelinecripto"
           style={{
             marginBottom: "4cm",
             marginTop: "-1cm",
@@ -423,12 +423,14 @@ export const Criptosasun = () => {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ marginLeft: "20%" }}>
+          <div style={{ marginLeft: "20%", color: "white" }}>
             <h5>
               “Todo el mundo sabe que algunas cosas son simplemente imposibles,
               hasta que alguien que no sabe eso las hace posibles”
             </h5>
-            <p style={{ marginLeft: "45%" }}>Albert Einstein</p>
+            <p style={{ marginLeft: "45%", color: "#C0C0C0" }}>
+              Albert Einstein
+            </p>
           </div>
         </section>
       </div>
@@ -449,7 +451,7 @@ export const Criptosasun = () => {
               <h1
                 style={{
                   fontSize: "127%",
-                  color: "black",
+                  color: "#7B8FA1",
                   position: "relative",
                   left: "0.6cm",
                   marginTop: "1cm",
@@ -460,29 +462,21 @@ export const Criptosasun = () => {
             </div>
             <div className="body">
               <p style={{ textAlign: "center" }}>
-                Criptosasun es una empresa líder en el campo de la Criptología y
-                Ciberseguridad. Con un equipo altamente capacitado de expertos
-                en seguridad informática y criptografía, brindamos soluciones
-                robustas y avanzadas para proteger la información confidencial
-                de nuestros clientes. Nuestra experiencia en la implementación
-                de sistemas seguros y en el desarrollo de estrategias de
-                mitigación de riesgos nos permite ofrecer soluciones adaptadas a
-                las necesidades específicas de cada cliente. En Criptosasun, nos
+                Criptosasun se destaca como una empresa líder en el ámbito de la
+                Criptología y Ciberseguridad. Contamos con un equipo altamente
+                capacitado de profesionales especializados en seguridad
+                informática y criptografía, quienes brindan soluciones sólidas y
+                avanzadas para salvaguardar la información confidencial de
+                nuestros clientes. Aprovechando nuestra amplia experiencia en la
+                implementación de sistemas seguros y en el diseño de estrategias
+                de mitigación de riesgos, ofrecemos soluciones adaptadas a las
+                necesidades únicas de cada cliente. En Criptosasun, nos
                 enorgullece mantenernos a la vanguardia de las últimas
-                tendencias y tecnologías en seguridad cibernética, garantizando
-                la protección de los datos en un entorno digital cada vez más
-                complejo. Criptosasun es una empresa líder en el campo de la
-                Criptología y Ciberseguridad. Con un equipo altamente capacitado
-                de expertos en seguridad informática y criptografía, brindamos
-                soluciones robustas y avanzadas para proteger la información
-                confidencial de nuestros clientes. Nuestra experiencia en la
-                implementación de sistemas seguros y en el desarrollo de
-                estrategias de mitigación de riesgos nos permite ofrecer
-                soluciones adaptadas a las necesidades específicas de cada
-                cliente. En Criptosasun, nos enorgullece mantenernos a la
-                vanguardia de las últimas tendencias y tecnologías en seguridad
-                cibernética, garantizando la protección de los datos en un
-                entorno digital cada vez más complejo.
+                tendencias y tecnologías en el ámbito de la seguridad
+                cibernética, asegurando la protección de los datos en un entorno
+                digital cada vez más complejo. Nuestro compromiso es brindar
+                servicios de calidad y excelencia, otorgando tranquilidad a
+                nuestros clientes en un mundo digital en constante evolución.
               </p>
             </div>
           </div>
@@ -513,7 +507,7 @@ export const Criptosasun = () => {
               <h1
                 style={{
                   fontSize: "125%",
-                  color: "black",
+                  color: "#7B8FA1",
                   position: "relative",
                   top: "1cm",
                   left: "1cm",
@@ -565,7 +559,7 @@ export const Criptosasun = () => {
                     className="demo-card visible demo-card--step2 "
                     style={{
                       width: "550px",
-                      height: "500px",
+                      height: "550px",
                       float: "right",
                       marginRight: "3%",
                       marginTop: "3cm",
@@ -608,22 +602,20 @@ export const Criptosasun = () => {
                         IA que utilizan tecnologías de vanguardia para analizar
                         grandes volúmenes de información. Nuestro enfoque se
                         basa en la precisión de los análisis y la generación de
-                        conocimientos valiosos para nuestros clientes. Al igual
-                        que un edificio bien construido proporciona estabilidad
-                        y confianza, en Criptosasun brindamos soluciones
-                        personalizadas que permiten a las empresas tomar
-                        decisiones informadas y optimizar sus procesos. A través
-                        de análisis de datos precisos y modelos predictivos,
-                        ayudamos a nuestros clientes a desbloquear el potencial
-                        oculto en sus datos, impulsando el crecimiento y el
-                        éxito empresarial en la era digital. En Criptosasun, nos
-                        enorgullece nuestra dedicación a la innovación y la
-                        excelencia en el manejo de datos. Nos esforzamos por
-                        mantenernos a la vanguardia de las últimas tendencias y
-                        tecnologías en el campo del Big Data e Inteligencia
-                        Artificial, asegurando que nuestros clientes obtengan
-                        soluciones de vanguardia que les permitan destacarse en
-                        su industria.
+                        conocimientos valiosos para nuestros clientes.En
+                        Criptosasun brindamos soluciones personalizadas que
+                        permiten a las empresas tomar decisiones informadas y
+                        optimizar sus procesos. A través de análisis de datos
+                        precisos y modelos predictivos, ayudamos a nuestros
+                        clientes a desbloquear el potencial oculto en sus datos,
+                        impulsando el crecimiento y el éxito empresarial en la
+                        era digital. En Criptosasun, nos enorgullece nuestra
+                        dedicación a la innovación y la excelencia en el manejo
+                        de datos. Nos esforzamos por mantenernos a la vanguardia
+                        de las últimas tendencias y tecnologías en el campo del
+                        Big Data e Inteligencia Artificial, asegurando que
+                        nuestros clientes obtengan soluciones de vanguardia que
+                        les permitan destacarse en su industria.
                       </p>
                     </div>
                   </div>
