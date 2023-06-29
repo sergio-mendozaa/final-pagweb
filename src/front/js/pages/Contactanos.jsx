@@ -26,9 +26,7 @@ export const Contactanos = () => {
     const menuSection = document.querySelector(".menu");
     const fixedImageSection = document.querySelector(".fixed-image");
     const footerSection = document.querySelector("footer");
-    const dotOne = document.querySelector(".dots .one");
-    const dotTwo = document.querySelector(".dots .two");
-    const dotThree = document.querySelector(".dots .three");
+
     const dots = document.querySelectorAll(".dots > div");
     const svgDown = document.querySelector("header .arrow-down");
     const svgUp = document.querySelector(".copyright .arrow-up");
@@ -88,48 +86,6 @@ export const Contactanos = () => {
         headerText.style.opacity = -window.pageYOffset / 300 + 1;
       }
       // home page JS
-      if (pageTitle.text === "CriptoSasun") {
-        //change dots background color
-        if (window.pageYOffset < headerSection.offsetHeight * 0.5) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotOne.classList.add("active");
-        } else if (
-          window.pageYOffset > headerSection.offsetHeight * 0.5 &&
-          window.pageYOffset < recipeSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (
-          window.pageYOffset > recipeSection.offsetTop * 0.75 &&
-          window.pageYOffset < menuSection.offsetTop * 0.81
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotOne.classList.remove("active");
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > menuSection.offsetTop * 0.81 &&
-          window.pageYOffset < fixedImageSection.offsetTop * 0.86
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > fixedImageSection.offsetTop * 0.86 &&
-          window.pageYOffset < footerSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotThree.classList.add("active");
-        } else if (
-          window.pageYOffset > footerSection.offsetTop * 0.72 &&
-          window.pageYOffset < footerSection.offsetTop * 0.901
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (window.pageYOffset > footerSection.offsetTop * 0.901) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-        }
-      }
     };
 
     // home page JS
@@ -303,7 +259,7 @@ export const Contactanos = () => {
 
               <li>
                 <Link to="/contactanos">
-                  Contactanos<span className="underline"></span>
+                  Contáctanos<span className="underline"></span>
                 </Link>
               </li>
 

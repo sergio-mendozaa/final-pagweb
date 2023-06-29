@@ -464,7 +464,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="text" style={{ marginTop: "5%" }}>
-          <h2>Descubre</h2>
+          <h2>Investiga </h2>
           <h3 style={{ color: "#7B8FA1" }}>Que te ofrecemos</h3>
           <div>
             <i className="fas fa-asterisk"></i>

@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import "../../styles/noticias.css";
 import Carga from "../component/Carga.jsx";
 export const Noticias = () => {
-  const { store, actions } = useContext(Context);
   const cardRefs = useRef([]);
   useEffect(() => {
     const body = document.querySelector("body");
-    const loader = document.querySelector(".loader-wrap");
+
     const links = document.querySelectorAll('a[href="#"]');
     const nav = document.querySelector("header nav");
     const navToggle = document.querySelector("header nav .toggle");
@@ -23,22 +22,16 @@ export const Noticias = () => {
     const headerSection = document.querySelector("header");
     const aboutSection = document.querySelector(".about-us");
     const recipeSection = document.querySelector(".recipes");
-    const menuSection = document.querySelector(".menu");
+
     const fixedImageSection = document.querySelector(".fixed-image");
-    const footerSection = document.querySelector("footer");
+
     const dotOne = document.querySelector(".dots .one");
     const dotTwo = document.querySelector(".dots .two");
     const dotThree = document.querySelector(".dots .three");
     const dots = document.querySelectorAll(".dots > div");
     const svgDown = document.querySelector("header .arrow-down");
     const svgUp = document.querySelector(".copyright .arrow-up");
-    const menuImgs = document.querySelectorAll(
-      ".menu .menu-image-container img"
-    );
-    const boxModel = document.querySelector(".menu .box-model");
-    const menuImageContainer = document.querySelector(".menu-image-container");
-    const boxModelArrow = document.querySelector(".menu .box-model .arrow");
-    const boxModelImage = document.querySelector(".menu .box-model img");
+
     const pageTitle = document.querySelector("title");
 
     // remove loader
@@ -49,13 +42,6 @@ export const Noticias = () => {
         e.preventDefault();
       })
     );
-
-    // toggle hamburger menu button
-    navToggle.addEventListener("click", () => {
-      navToggle.classList.toggle("active");
-      navSpanMiddle.classList.toggle("hide");
-      navNavigationBar.classList.toggle("show");
-    });
 
     // show active navigationbar li
     navNavigationBarLi.forEach((li) =>
@@ -107,27 +93,11 @@ export const Noticias = () => {
           dotOne.classList.remove("active");
           dotThree.classList.remove("active");
           dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > menuSection.offsetTop * 0.81 &&
-          window.pageYOffset < fixedImageSection.offsetTop * 0.86
-        ) {
+        }
+        {
           dots.forEach((dot) => dot.classList.add("black"));
           dotThree.classList.remove("active");
           dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > fixedImageSection.offsetTop * 0.86 &&
-          window.pageYOffset < footerSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotThree.classList.add("active");
-        } else if (
-          window.pageYOffset > footerSection.offsetTop * 0.72 &&
-          window.pageYOffset < footerSection.offsetTop * 0.901
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (window.pageYOffset > footerSection.offsetTop * 0.901) {
-          dots.forEach((dot) => dot.classList.remove("black"));
         }
       }
     };
@@ -152,21 +122,6 @@ export const Noticias = () => {
         })
       );
 
-      // show box model
-      menuImgs.forEach((img) =>
-        img.addEventListener("click", function () {
-          const arr = Array.from(this.parentElement.parentElement.children);
-
-          arr.forEach((div) => div.classList.remove("active"));
-
-          this.parentElement.classList.add("active");
-          boxModel.classList.add("active");
-          boxModelImage.src = this.src;
-          boxModelImage.classList.add("active");
-          body.classList.add("hide-scroll");
-        })
-      );
-
       // box model functions
       function boxModelFun(e) {
         // close box model
@@ -187,7 +142,6 @@ export const Noticias = () => {
             e.target.classList.contains("arrow-right") ||
             e.target.classList.contains("arrow-left")
           ) {
-            const arr = Array.from(menuImageContainer.children);
             const active = arr.find((div) => div.classList.contains("active"));
 
             // change box model image

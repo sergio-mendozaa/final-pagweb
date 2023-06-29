@@ -316,7 +316,7 @@ export const Criptosasun = () => {
 
               <li>
                 <Link to="/contactanos">
-                  Contactanos<span className="underline"></span>
+                  Contáctanos<span className="underline"></span>
                 </Link>
               </li>
 
@@ -524,73 +524,68 @@ export const Criptosasun = () => {
           <div className="image-container">
             <div className="image-part image-left-cripto"></div>
             <div className="image-part image-middle">
-              <div className="text">
-                <div>
-                  <div
-                    ref={(ref) => cardRefs.current.push(ref)}
-                    className="demo-card visible demo-card--step2 "
+              <div
+                ref={(ref) => cardRefs.current.push(ref)}
+                className="demo-card visible demo-card--step2 "
+                style={{
+                  width: "550px",
+                  height: "550px",
+                  float: "right",
+                  marginRight: "6%",
+                  marginTop: "2cm",
+                }}
+              >
+                <div className="head">
+                  <span className="small"></span>
+                  <h2
                     style={{
-                      width: "550px",
-                      height: "550px",
-                      float: "right",
-                      marginRight: "3%",
-                      marginTop: "3cm",
+                      fontSize: "125%",
+                      color: "black",
+                      position: "relative",
+                      top: "1cm",
+                      left: "0.5cm",
                     }}
                   >
-                    <div className="head">
-                      <span className="small"></span>
-                      <h2
-                        style={{
-                          fontSize: "125%",
-                          color: "black",
-                          position: "relative",
-                          top: "1cm",
-                          left: "0.5cm",
-                        }}
-                      >
-                        Aqui tienes toda nuestra información
-                      </h2>
-                      <h3
-                        style={{
-                          color: "#7B8FA1",
-                          marginLeft: "0.3cm",
-                          marginBottom: "-1%",
-                          fontSize: "15px",
-                          marginTop: "1cm",
-                        }}
-                      >
-                        {" "}
-                        ¡A qué estas esperando!
-                      </h3>
-                    </div>
-                    <div className="body">
-                      <p style={{ marginTop: "1cm", textAlign: "center" }}>
-                        Criptosasun, una empresa líder en el campo del Big Data
-                        e Inteligencia Artificial, se destaca como un edificio
-                        bien construido en el mundo de la tecnología. Al igual
-                        que los cimientos sólidos y las estructuras bien
-                        diseñadas de un edificio, en Criptosasun contamos con un
-                        equipo excepcional de científicos de datos y expertos en
-                        IA que utilizan tecnologías de vanguardia para analizar
-                        grandes volúmenes de información. Nuestro enfoque se
-                        basa en la precisión de los análisis y la generación de
-                        conocimientos valiosos para nuestros clientes.En
-                        Criptosasun brindamos soluciones personalizadas que
-                        permiten a las empresas tomar decisiones informadas y
-                        optimizar sus procesos. A través de análisis de datos
-                        precisos y modelos predictivos, ayudamos a nuestros
-                        clientes a desbloquear el potencial oculto en sus datos,
-                        impulsando el crecimiento y el éxito empresarial en la
-                        era digital. En Criptosasun, nos enorgullece nuestra
-                        dedicación a la innovación y la excelencia en el manejo
-                        de datos. Nos esforzamos por mantenernos a la vanguardia
-                        de las últimas tendencias y tecnologías en el campo del
-                        Big Data e Inteligencia Artificial, asegurando que
-                        nuestros clientes obtengan soluciones de vanguardia que
-                        les permitan destacarse en su industria.
-                      </p>
-                    </div>
-                  </div>
+                    Aqui tienes toda nuestra información
+                  </h2>
+                  <h3
+                    style={{
+                      color: "#7B8FA1",
+                      marginLeft: "0.3cm",
+                      marginBottom: "-1%",
+                      fontSize: "15px",
+                      marginTop: "1cm",
+                    }}
+                  >
+                    {" "}
+                    ¡A qué estas esperando!
+                  </h3>
+                </div>
+                <div className="body">
+                  <p style={{ marginTop: "1.5cm", textAlign: "center" }}>
+                    En Criptosasun, nos destacamos como líderes en el campo de
+                    la innovación tecnológica, dedicados a desarrollar
+                    soluciones avanzadas que impulsan la eficiencia y la
+                    productividad en el mundo digital. Nuestras aplicaciones,
+                    fruto de una ingeniería de vanguardia y un diseño intuitivo,
+                    redefinen la experiencia del usuario y lideran la próxima
+                    generación de tecnología. Más allá de las aplicaciones,
+                    estamos revolucionando el sector financiero. Nuestro equipo
+                    de expertos ha desarrollado plataformas sofisticadas para el
+                    análisis de mercado y la transacción de acciones y
+                    criptomonedas, democratizando el acceso a estos recursos y
+                    abriendo las puertas a la futura generación de finanzas.
+                    Pero nuestra visión innovadora no se limita a lo digital. En
+                    el mundo físico, nuestro equipo de ingenieros y científicos
+                    de materiales están cambiando la forma en que construimos y
+                    diseñamos, creando materiales más fuertes, más ligeros y más
+                    sostenibles. En Criptosasun, vemos la innovación como un
+                    viaje continuo. Cada producto que desarrollamos, cada
+                    servicio que ofrecemos, está diseñado para superar los
+                    límites de lo posible. Invitamos a todos a unirse a nosotros
+                    en este emocionante viaje hacia la innovación y la
+                    excelencia.
+                  </p>
                 </div>
               </div>
             </div>
