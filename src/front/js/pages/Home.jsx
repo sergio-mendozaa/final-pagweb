@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import Carga from "../component/Carga.jsx";
+import Footer from "../component/Footer.jsx";
 import imagen1 from "/workspace/final-pagweb/src/front/img/annie-spratt-vGgn0xLdy8s-unsplash (1).jpg";
 import imagen2 from "/workspace/final-pagweb/src/front/img/ryoji-iwata-IBaVuZsJJTo-unsplash (2).jpg";
 
@@ -540,41 +541,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <footer>
-        <div className="text">
-          <h2>ABOUT CriptoSasun</h2>
-          <div>
-            <i className="fas fa-asterisk"></i>
-          </div>
-          <p>Aqui encontrará todas las maneras de contactar con nosotros</p>
-        </div>
-        <div className="contact-container">
-          <div className="social-media">
-            <h3>Follow Along</h3>
-            <div className="links">
-              <a href="#">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-facebook-square"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-pinterest"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </div>
-          <div className="newsletter">
-            <h3>NewsLetter</h3>
-            <form method="post">
-              <input type="email" name="email" placeholder="Type Your Email" />
-              <i className="fas fa-envelope"></i>
-            </form>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       <div className="copyright">
         <svg
           className="svg-up"

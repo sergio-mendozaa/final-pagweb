@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/criptosasun.css";
 import Carga from "../component/Carga.jsx";
+import Footer from "../component/Footer.jsx";
 export const Criptosasun = () => {
   const { store, actions } = useContext(Context);
   const cardRefs = useRef([]);

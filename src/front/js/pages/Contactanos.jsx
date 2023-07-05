@@ -3,6 +3,8 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/contactanos.css";
 import Carga from "../component/Carga.jsx";
+import Footer from "../component/Footer.jsx";
+import Card from "../component/Card.jsx";
 export const Contactanos = () => {
   const { store, actions } = useContext(Context);
   const cardRefs = useRef([]);
@@ -186,31 +188,6 @@ export const Contactanos = () => {
       window.addEventListener("click", boxModelFun);
       boxModelArrow.addEventListener("click", boxModelFun);
     }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    cardRefs.current.forEach((ref) => observer.observe(ref));
-
-    return () => cardRefs.current.forEach((ref) => observer.unobserve(ref));
-  }, []);
-
-  window.addEventListener("scroll", function () {
-    const form = document.getElementById("contact-form");
-    const top = form.getBoundingClientRect().top;
-
-    if (top <= window.innerHeight) {
-      form.classList.add("active");
-    }
   });
 
   return (
@@ -305,47 +282,30 @@ export const Contactanos = () => {
         <div className="arrow-down"></div>
       </header>
 
-      <div className="menu">
-        <div className="box-model">
-          <i className="fas fa-times fa-2x "></i>
-          <div className="arrow">
-            <div className="arrow arrow-right"></div>
-            <div className="arrow arrow-left"></div>
-          </div>
-          <div className="box-image-container">
-            <div className="box-image">
-              <img src="" alt="Food Photo" />
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="diagramatiempo">
         <section
           id="timeline"
           style={{
             marginBottom: "4cm",
-            marginTop: "-1cm",
+            marginTop: "3cm",
             paddingTop: "3cm",
             paddingBottom: "3cm",
-            display: "flex",
-            justifyContent: "space-between",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
           <div
             className="text"
-            style={{ width: "43%", marginLeft: "3cm", marginTop: "1.5cm" }}
+            style={{ marginLeft: "15%", marginTop: "-1cm" }}
           >
-            <h2 style={{ marginLeft: "4cm" }}>Estamos </h2>
-            <h3 style={{ color: "#7B8FA1", marginLeft: "5.5cm" }}>
+            <h2 style={{ marginLeft: "25%" }}>Estamos </h2>
+            <h3 style={{ color: "#7B8FA1", marginLeft: "28%" }}>
               aquí para ti
             </h3>
             <div>
-              <i
-                className="fas fa-asterisk"
-                style={{ marginLeft: "10.5cm" }}
-              ></i>
+              <i className="fas fa-asterisk" style={{ marginLeft: "38%" }}></i>
             </div>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: "center", marginLeft: "9%", width: "60%" }}>
               A tu derecha, encontrarás nuestro formulario de contacto. Es un
               camino rápido y sencillo para ponerte en contacto con nosotros.
               Solo necesitas proporcionarnos tu nombre, correo electrónico, el
@@ -353,38 +313,19 @@ export const Contactanos = () => {
               esforzamos por responder a todas las consultas en un plazo de 24
               horas. Esperamos tener noticias tuyas pronto.
             </p>
-          </div>
-          <div className="form-container" id="contact-form">
-            <form method="POST">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nombre"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Correo electrónico"
-                required
-              />
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Asunto"
-                required
-              />
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Mensaje"
-                required
-              ></textarea>
-              <input type="submit" value="Enviar" />
-            </form>
+            <div
+              style={{
+                display: "flex",
+                marginTop: "2cm",
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <Card imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688585004/instagram_fyjjke.png" />
+              <Card imgSrc="" />
+              <Card imgSrc="" />
+              <Card imgSrc="" />
+            </div>
           </div>
         </section>
       </div>
@@ -399,41 +340,7 @@ export const Contactanos = () => {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
 
-      <footer>
-        <div className="text">
-          <h2>ABOUT CriptoSasun</h2>
-          <div>
-            <i className="fas fa-asterisk"></i>
-          </div>
-          <p>Aqui encontrará todas las maneras de contactar con nosotros</p>
-        </div>
-        <div className="contact-container">
-          <div className="social-media">
-            <h3>Follow Along</h3>
-            <div className="links">
-              <a href="#">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-facebook-square"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-pinterest"></i>
-              </a>
-              <a href="#">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </div>
-          <div className="newsletter">
-            <h3>NewsLetter</h3>
-            <form method="post">
-              <input type="email" name="email" placeholder="Type Your Email" />
-              <i className="fas fa-envelope"></i>
-            </form>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       <div className="copyright">
         <svg
           className="svg-up"

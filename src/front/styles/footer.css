@@ -1,0 +1,49 @@
+/*Start Footer*/
+footer {
+  background-color: #121212;
+  padding: 60px 20px;
+}
+footer .text {
+  max-width: 500px;
+  margin: auto;
+}
+footer .text h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 19px;
+  letter-spacing: 1.9px;
+  margin-bottom: 25px;
+}
+footer .text .fa-asterisk {
+  font-size: 12px;
+}
+footer .text p {
+  line-height: 27px;
+}
+footer .contact-container {
+  padding: 40px 0;
+  max-width: 1000px;
+  margin: auto;
+}
+footer .contact-container > div {
+  flex: 1;
+}
+footer .contact-container h3 {
+  font-size: 19px;
+  letter-spacing: 1.9px;
+}
+footer .social-media .links a {
+  margin: 0 10px;
+  font-size: 25px;
+}
+footer .newsletter input {
+  padding: 10px;
+  width: 270px;
+  background-color: #eee;
+  border: none;
+  margin-left: -15px;
+}
+footer .newsletter i {
+  margin-left: -40px;
+  vertical-align: middle;
+  font-size: 21px;
+}
