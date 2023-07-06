@@ -16,16 +16,16 @@
 
 /* Estilos comunes para todas las tarjetas */
 .redes {
-  flex: 0 0 calc(20% - 40px); /* 20% es el ancho de cada tarjeta y 40px es el margen total en x (20px a cada lado) */
+  flex: 0 0 calc(20% - 20px); /* 20% es el ancho de cada tarjeta y 20px es el margen total en x (solo a la derecha) */
   box-sizing: border-box;
   padding: 20px;
-  margin: 20px;
+  margin-right: 20px; /* Solo margen a la derecha */
   border-radius: 10px;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   text-align: center;
-  height: 5cm;
+  height: 6cm;
 }
 
 /* Estilos para el contenido de las tarjetas */

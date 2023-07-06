@@ -296,22 +296,28 @@ export const Contactanos = () => {
         >
           <div
             className="text"
-            style={{ marginLeft: "15%", marginTop: "-1cm" }}
+            style={{ marginLeft: "12%", marginTop: "-1cm" }}
           >
-            <h2 style={{ marginLeft: "25%" }}>Estamos </h2>
-            <h3 style={{ color: "#7B8FA1", marginLeft: "28%" }}>
+            <h2 style={{ marginLeft: "29%" }}>Estamos </h2>
+            <h3 style={{ color: "#7B8FA1", marginLeft: "33%" }}>
               aquí para ti
             </h3>
             <div>
-              <i className="fas fa-asterisk" style={{ marginLeft: "38%" }}></i>
+              <i className="fas fa-asterisk" style={{ marginLeft: "43%" }}></i>
             </div>
-            <p style={{ textAlign: "center", marginLeft: "9%", width: "60%" }}>
-              A tu derecha, encontrarás nuestro formulario de contacto. Es un
-              camino rápido y sencillo para ponerte en contacto con nosotros.
-              Solo necesitas proporcionarnos tu nombre, correo electrónico, el
-              asunto de tu consulta y el mensaje que deseas enviarnos. Nos
-              esforzamos por responder a todas las consultas en un plazo de 24
-              horas. Esperamos tener noticias tuyas pronto.
+            <p style={{ textAlign: "center", marginLeft: "10%", width: "65%" }}>
+              Te invitamos a explorar nuestras diversas redes sociales ubicadas
+              en la parte inferior de esta página. Estas plataformas representan
+              un canal accesible y eficaz para ponerte en contacto con nosotros,
+              permitiéndote interactuar directamente con nuestro equipo y
+              recibir respuestas a tus preguntas de manera oportuna. Además de
+              facilitar la comunicación, nuestras redes sociales son una ventana
+              hacia los numerosos proyectos en los que estamos involucrados. Con
+              actualizaciones periódicas, compartimos información detallada
+              sobre nuestros desarrollos en curso y los avances que estamos
+              logrando. Al seguirnos, podrás mantenerse al día con todo lo que
+              sucede en nuestra organización y el impacto que estamos teniendo
+              en nuestra industria.
             </p>
             <div
               style={{
@@ -319,12 +325,26 @@ export const Contactanos = () => {
                 marginTop: "2cm",
                 height: "100%",
                 width: "100%",
+                display: "flex",
+                justifyContent: "flex-start",
               }}
             >
-              <Card imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688585004/instagram_fyjjke.png" />
-              <Card imgSrc="" />
-              <Card imgSrc="" />
-              <Card imgSrc="" />
+              <Card
+                imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688585004/instagram_fyjjke.png"
+                href="https://www.instagram.com/criptosasun_energia/"
+              />
+              <Card
+                imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688632338/facebook_sqjzfp.png"
+                href="https://www.facebook.com/profile.php?id=100094072074642"
+              />
+              <Card
+                imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688632248/gorjeo_vqqkdj.png"
+                href="https://twitter.com/criptoner_ "
+              />
+              <Card
+                imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688632248/linkedin_qnwgci.png"
+                href="https://www.linkedin.com/in/criptosasun-energ%C3%ADa-sl-533a8a281/"
+              />
             </div>
           </div>
         </section>

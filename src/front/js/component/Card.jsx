@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../../styles/card.css";
 
-const Card = ({ imgSrc = "" }) => {
+const Card = ({ imgSrc = "", href }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -33,7 +33,9 @@ const Card = ({ imgSrc = "" }) => {
     <>
       <div className="redes" ref={cardRef}>
         <img src={imgSrc} alt="Logo" />
-        <p>Aquí es donde escribirás tu párrafo.</p>
+        <a style={{ color: "black" }} href={href}>
+          {href}
+        </a>
       </div>
     </>
   );
