@@ -14,16 +14,16 @@ export const Footer = () => (
         <div className="social-media">
           <h3>Follow Along</h3>
           <div className="links">
-            <a href="#">
+            <a href="https://twitter.com/criptoner_">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=100094072074642">
               <i className="fab fa-facebook-square"></i>
             </a>
-            <a href="#">
-              <i className="fab fa-pinterest"></i>
+            <a href="https://www.instagram.com/criptosasun_energia/">
+              <i className="fa-brands fa-instagram"></i>
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/criptosasun-energ%C3%ADa-sl-533a8a281/">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>

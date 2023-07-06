@@ -15,38 +15,18 @@ export const Criptosasun = () => {
     }
   };
 
-  const restartAnimation = () => {
-    setAnimationName(textAnimation.current, "none");
-    requestAnimationFrame(() =>
-      setTimeout(() => setAnimationName(textAnimation.current, ""), 0)
-    );
-  };
   useEffect(() => {
     const body = document.querySelector("body");
-    const loader = document.querySelector(".loader-wrap");
-    const links = document.querySelectorAll('a[href="#"]');
+
     const nav = document.querySelector("header nav");
-    const navToggle = document.querySelector("header nav .toggle");
-    const navSpanMiddle = document.querySelector("header nav .toggle .middle");
-    const navNavigationBar = document.querySelector(
-      "header nav .navigation-bar"
-    );
-    const navNavigationBarLi = document.querySelectorAll(
-      "header nav .navigation-bar li"
-    );
+
     const headerText = document.querySelector("header .text");
     const headerSection = document.querySelector("header");
     const aboutSection = document.querySelector(".about-us");
-    const recipeSection = document.querySelector(".recipes");
-    const menuSection = document.querySelector(".menu");
-    const fixedImageSection = document.querySelector(".fixed-image");
-    const footerSection = document.querySelector("footer");
-    const dotOne = document.querySelector(".dots .one");
-    const dotTwo = document.querySelector(".dots .two");
-    const dotThree = document.querySelector(".dots .three");
+
     const dots = document.querySelectorAll(".dots > div");
     const svgDown = document.querySelector("header .arrow-down");
-    const svgUp = document.querySelector(".copyright .arrow-up");
+
     const menuImgs = document.querySelectorAll(
       ".menu .menu-image-container img"
     );
@@ -59,35 +39,8 @@ export const Criptosasun = () => {
     // remove loader
 
     // prevent links click hash
-    links.forEach((link) =>
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-      })
-    );
-
-    // toggle hamburger menu button
-    navToggle.addEventListener("click", () => {
-      navToggle.classList.toggle("active");
-      navSpanMiddle.classList.toggle("hide");
-      navNavigationBar.classList.toggle("show");
-    });
 
     // show active navigationbar li
-    navNavigationBarLi.forEach((li) =>
-      li.addEventListener("click", () => {
-        const arr = Array.from(li.parentElement.children);
-        arr.forEach((li) => li.classList.remove("active"));
-        li.classList.add("active");
-      })
-    );
-
-    // svg-up smooth scroll
-    svgUp.addEventListener("click", () => {
-      window.scroll({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
 
     window.onscroll = function () {
       if (window.pageYOffset > headerSection.offsetHeight - 75) {
@@ -103,48 +56,6 @@ export const Criptosasun = () => {
         headerText.style.opacity = -window.pageYOffset / 300 + 1;
       }
       // home page JS
-      if (pageTitle.text === "CriptoSasun") {
-        //change dots background color
-        if (window.pageYOffset < headerSection.offsetHeight * 0.5) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotOne.classList.add("active");
-        } else if (
-          window.pageYOffset > headerSection.offsetHeight * 0.5 &&
-          window.pageYOffset < recipeSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (
-          window.pageYOffset > recipeSection.offsetTop * 0.75 &&
-          window.pageYOffset < menuSection.offsetTop * 0.81
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotOne.classList.remove("active");
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > menuSection.offsetTop * 0.81 &&
-          window.pageYOffset < fixedImageSection.offsetTop * 0.86
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > fixedImageSection.offsetTop * 0.86 &&
-          window.pageYOffset < footerSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotThree.classList.add("active");
-        } else if (
-          window.pageYOffset > footerSection.offsetTop * 0.72 &&
-          window.pageYOffset < footerSection.offsetTop * 0.901
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (window.pageYOffset > footerSection.offsetTop * 0.901) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-        }
-      }
     };
 
     // home page JS
@@ -436,20 +347,20 @@ export const Criptosasun = () => {
             <div className="body">
               <p style={{ textAlign: "center" }}>
                 Criptosasun se destaca como una empresa líder en el ámbito de la
-                Criptología y Ciberseguridad. Contamos con un equipo altamente
-                capacitado de profesionales especializados en seguridad
+                criptología y ciberseguridad. Contamos con un equipo de
+                profesionales altamente capacitados, especializados en seguridad
                 informática y criptografía, quienes brindan soluciones sólidas y
                 avanzadas para salvaguardar la información confidencial de
-                nuestros clientes. Aprovechando nuestra amplia experiencia en la
+                nuestros clientes. Aprovechamos nuestra amplia experiencia en la
                 implementación de sistemas seguros y en el diseño de estrategias
-                de mitigación de riesgos, ofrecemos soluciones adaptadas a las
+                de mitigación de riesgos para ofrecer soluciones adaptadas a las
                 necesidades únicas de cada cliente. En Criptosasun, nos
-                enorgullece mantenernos a la vanguardia de las últimas
-                tendencias y tecnologías en el ámbito de la seguridad
-                cibernética, asegurando la protección de los datos en un entorno
-                digital cada vez más complejo. Nuestro compromiso es brindar
-                servicios de calidad y excelencia, otorgando tranquilidad a
-                nuestros clientes en un mundo digital en constante evolución.
+                enorgullece estar a la vanguardia de las últimas tendencias y
+                tecnologías en el ámbito de la seguridad cibernética,
+                garantizando la protección de los datos en un entorno digital
+                cada vez más complejo. Nuestro compromiso es brindar servicios
+                de calidad y excelencia, otorgando tranquilidad a nuestros
+                clientes en un mundo digital en constante evolución.
               </p>
             </div>
           </div>
@@ -492,28 +403,28 @@ export const Criptosasun = () => {
             </div>
             <div className="body">
               <p style={{ marginTop: "1cm", textAlign: "center" }}>
-                Criptosasun, una empresa líder en el campo del Big Data e
-                Inteligencia Artificial, se destaca como un edificio bien
-                construido en el mundo de la tecnología. Al igual que los
-                cimientos sólidos y las estructuras bien diseñadas de un
-                edificio, en Criptosasun contamos con un equipo excepcional de
-                científicos de datos y expertos en IA que utilizan tecnologías
-                de vanguardia para analizar grandes volúmenes de información.
-                Nuestro enfoque se basa en la precisión de los análisis y la
-                generación de conocimientos valiosos para nuestros clientes. Al
-                igual que un edificio bien construido proporciona estabilidad y
-                confianza, en Criptosasun brindamos soluciones personalizadas
-                que permiten a las empresas tomar decisiones informadas y
-                optimizar sus procesos. A través de análisis de datos precisos y
-                modelos predictivos, ayudamos a nuestros clientes a desbloquear
-                el potencial oculto en sus datos, impulsando el crecimiento y el
+                Criptosasun, una empresa líder en el campo del Big Data y la
+                Inteligencia Artificial, se destaca como un robusto edificio en
+                el mundo de la tecnología. Al igual que los cimientos sólidos y
+                las estructuras bien diseñadas de un edificio, en Criptosasun
+                contamos con un equipo excepcional de científicos de datos y
+                expertos en IA que utilizan tecnologías de vanguardia para
+                analizar grandes volúmenes de información. Nuestro enfoque se
+                centra en la precisión de los análisis y en la generación de
+                conocimientos valiosos para nuestros clientes. Del mismo modo
+                que un edificio robusto proporciona estabilidad y confianza, en
+                Criptosasun brindamos soluciones personalizadas que permiten a
+                las empresas tomar decisiones informadas y optimizar sus
+                procesos. Mediante análisis de datos precisos y modelos
+                predictivos, ayudamos a nuestros clientes a desbloquear el
+                potencial oculto en sus datos, impulsando el crecimiento y el
                 éxito empresarial en la era digital. En Criptosasun, nos
                 enorgullece nuestra dedicación a la innovación y la excelencia
                 en el manejo de datos. Nos esforzamos por mantenernos a la
                 vanguardia de las últimas tendencias y tecnologías en el campo
-                del Big Data e Inteligencia Artificial, asegurando que nuestros
-                clientes obtengan soluciones de vanguardia que les permitan
-                destacarse en su industria.
+                del Big Data y la Inteligencia Artificial, asegurando que
+                nuestros clientes obtengan soluciones de vanguardia que les
+                permitan destacarse en su industria.
               </p>
             </div>
           </div>
@@ -564,28 +475,29 @@ export const Criptosasun = () => {
                 </div>
                 <div className="body">
                   <p style={{ marginTop: "1.5cm", textAlign: "center" }}>
-                    En Criptosasun, nos destacamos como líderes en el campo de
-                    la innovación tecnológica, dedicados a desarrollar
-                    soluciones avanzadas que impulsan la eficiencia y la
-                    productividad en el mundo digital. Nuestras aplicaciones,
-                    fruto de una ingeniería de vanguardia y un diseño intuitivo,
-                    redefinen la experiencia del usuario y lideran la próxima
-                    generación de tecnología. Más allá de las aplicaciones,
-                    estamos revolucionando el sector financiero. Nuestro equipo
-                    de expertos ha desarrollado plataformas sofisticadas para el
+                    En Criptosasun, destacamos como líderes en el campo de la
+                    innovación tecnológica, dedicados a desarrollar soluciones
+                    avanzadas que impulsan la eficiencia y la productividad en
+                    el mundo digital. Las aplicaciones que generamos, resultado
+                    de una ingeniería de vanguardia y un diseño intuitivo, están
+                    redefiniendo la experiencia del usuario y liderando la
+                    próxima generación de tecnología. Pero nuestro alcance va
+                    más allá de las aplicaciones, ya que también estamos
+                    revolucionando el sector financiero. Nuestro equipo de
+                    expertos ha desarrollado sofisticadas plataformas para el
                     análisis de mercado y la transacción de acciones y
                     criptomonedas, democratizando el acceso a estos recursos y
-                    abriendo las puertas a la futura generación de finanzas.
-                    Pero nuestra visión innovadora no se limita a lo digital. En
-                    el mundo físico, nuestro equipo de ingenieros y científicos
-                    de materiales están cambiando la forma en que construimos y
-                    diseñamos, creando materiales más fuertes, más ligeros y más
-                    sostenibles. En Criptosasun, vemos la innovación como un
-                    viaje continuo. Cada producto que desarrollamos, cada
-                    servicio que ofrecemos, está diseñado para superar los
-                    límites de lo posible. Invitamos a todos a unirse a nosotros
-                    en este emocionante viaje hacia la innovación y la
-                    excelencia.
+                    abriendo las puertas a la futura generación de finanzas. Sin
+                    embargo, nuestra visión innovadora no se limita al mundo
+                    digital. En el ámbito físico, nuestros ingenieros y
+                    científicos de materiales están transformando la manera en
+                    que construimos y diseñamos, creando materiales más
+                    resistentes, ligeros y sostenibles. En Criptosasun,
+                    percibimos la innovación como un viaje continuo. Cada
+                    producto que desarrollamos, cada servicio que ofrecemos,
+                    está diseñado para superar los límites de lo posible. Te
+                    invitamos a que te unas a nosotros en este emocionante viaje
+                    hacia la innovación y la excelencia.
                   </p>
                 </div>
               </div>

@@ -11,27 +11,16 @@ export const Home = () => {
   const { store, actions } = useContext(Context);
   useEffect(() => {
     const body = document.querySelector("body");
-    const loader = document.querySelector(".loader-wrap");
-    const links = document.querySelectorAll('a[href="#"]');
+
     const nav = document.querySelector("header nav");
-    const navToggle = document.querySelector("header nav .toggle");
-    const navSpanMiddle = document.querySelector("header nav .toggle .middle");
-    const navNavigationBar = document.querySelector(
-      "header nav .navigation-bar"
-    );
+
     const navNavigationBarLi = document.querySelectorAll(
       "header nav .navigation-bar li"
     );
     const headerText = document.querySelector("header .text");
     const headerSection = document.querySelector("header");
     const aboutSection = document.querySelector(".about-us");
-    const recipeSection = document.querySelector(".recipes");
-    const menuSection = document.querySelector(".menu");
-    const fixedImageSection = document.querySelector(".fixed-image");
-    const footerSection = document.querySelector("footer");
-    const dotOne = document.querySelector(".dots .one");
-    const dotTwo = document.querySelector(".dots .two");
-    const dotThree = document.querySelector(".dots .three");
+
     const dots = document.querySelectorAll(".dots > div");
     const svgDown = document.querySelector("header .arrow-down");
     const svgUp = document.querySelector(".copyright .arrow-up");
@@ -47,18 +36,8 @@ export const Home = () => {
     // remove loader
 
     // prevent links click hash
-    links.forEach((link) =>
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-      })
-    );
 
     // toggle hamburger menu button
-    navToggle.addEventListener("click", () => {
-      navToggle.classList.toggle("active");
-      navSpanMiddle.classList.toggle("hide");
-      navNavigationBar.classList.toggle("show");
-    });
 
     // show active navigationbar li
     navNavigationBarLi.forEach((li) =>
@@ -91,48 +70,6 @@ export const Home = () => {
         headerText.style.opacity = -window.pageYOffset / 300 + 1;
       }
       // home page JS
-      if (pageTitle.text === "CriptoSasun") {
-        //change dots background color
-        if (window.pageYOffset < headerSection.offsetHeight * 0.5) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotOne.classList.add("active");
-        } else if (
-          window.pageYOffset > headerSection.offsetHeight * 0.5 &&
-          window.pageYOffset < recipeSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (
-          window.pageYOffset > recipeSection.offsetTop * 0.75 &&
-          window.pageYOffset < menuSection.offsetTop * 0.81
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotOne.classList.remove("active");
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > menuSection.offsetTop * 0.81 &&
-          window.pageYOffset < fixedImageSection.offsetTop * 0.86
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        } else if (
-          window.pageYOffset > fixedImageSection.offsetTop * 0.86 &&
-          window.pageYOffset < footerSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotThree.classList.add("active");
-        } else if (
-          window.pageYOffset > footerSection.offsetTop * 0.72 &&
-          window.pageYOffset < footerSection.offsetTop * 0.901
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (window.pageYOffset > footerSection.offsetTop * 0.901) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-        }
-      }
     };
 
     // home page JS
@@ -237,11 +174,7 @@ export const Home = () => {
   return (
     <>
       <Carga />
-      <div className="dots">
-        <div className="active one" data-x="header"></div>
-        <div className="two" data-x=".recipes"></div>
-        <div className="three" data-x=".fixed-image"></div>
-      </div>
+
       <header className="header-primera-pagina">
         <nav>
           <div className="logo">
@@ -334,10 +267,10 @@ export const Home = () => {
           <p>
             CryptoSasun Energía es una empresa altamente competente. Nuestro
             enfoque innovador nos permite desarrollar soluciones vanguardistas
-            que transforman la industria. Además lo que nos distingue es nuestro
+            que transforman la industria. Lo que nos distingue es nuestro
             espíritu cercano y trabajador. En CryptoSasun, valoramos y cuidamos
-            de cada miembro de nuestra comunidad, creando un ambiente de trabajo
-            colaborativo y altamamente provechoso. Estamos comprometidos en
+            a cada miembro de nuestra comunidad, creando un ambiente de trabajo
+            colaborativo y altamente provechoso. Estamos comprometidos en
             brindar servicios de calidad y generar un impacto positivo en la
             vida de las personas y empresas.
           </p>
@@ -476,13 +409,13 @@ export const Home = () => {
             soluciones tecnológicas innovadoras hasta atención personalizada,
             nos esforzamos por brindar la mejor experiencia posible. Uno de
             nuestros objetivos principales es ayudar a nuestros clientes a
-            alcanzar sus metas , superar sus expectativas, ahorrar... Para
-            obtener más información sobre lo que ofrecemos y cómo podemos
-            ayudarle, lo invitamos a explorar nuestro sitio web y las imagenes
-            que tiene a su izquierda, donde encontrará detalles sobre nuestros
-            productos, y recursos informativos. No pierda la oportunidad de
-            descubrir cómo podemos mejorar su vida o negocio. ¡Infórmese ahora y
-            déjenos ser su socio de confianza en el camino hacia el éxito!
+            alcanzar sus metas, superar sus expectativas y ahorrar. Para obtener
+            más información sobre lo que ofrecemos y cómo podemos ayudarle, lo
+            invitamos a explorar nuestro sitio web y las imágenes que tiene a su
+            izquierda, donde encontrará detalles sobre nuestros productos y
+            recursos informativos. No pierda la oportunidad de descubrir cómo
+            podemos mejorar su vida o negocio. ¡Infórmese ahora y déjenos ser su
+            socio de confianza en el camino hacia el éxito!
           </p>
           <hr></hr>
         </div>
@@ -505,21 +438,21 @@ export const Home = () => {
             definidas que resuelven un problema o realizan una tarea específica.
             En el contexto de la informática, los algoritmos son fundamentales
             para el procesamiento de datos y la toma de decisiones en diferentes
-            aplicaciones.Podemos distinguir 2 tipos de Algoritmos, clásicos que
-            son aquellos diseñados para ejecutarse en computadoras tradicionales
-            basadas en bits clásicos. Utilizan operaciones lógicas y aritméticas
-            para realizar cálculos. Son ampliamente utilizados en todas las
-            áreas de la informática, desde cálculos matemáticos hasta búsquedas
-            en bases de datos y algoritmos de ordenamiento y los Algoritmos
-            cuánticos que se basan en los principios de la mecánica cuántica y
-            utilizan qubits, que son la unidad básica de información cuántica.
-            Aprovechan las propiedades únicas de los qubits, como la
-            superposición y el entrelazamiento, para realizar cálculos de manera
-            más eficiente en ciertos problemas específicos. Los algoritmos
-            cuánticos tienen el potencial de resolver problemas complejos, como
-            la factorización de números grandes y la búsqueda en grandes
-            conjuntos de datos, de manera más rápida que los algoritmos
-            clásicos.
+            aplicaciones. Podemos distinguir dos tipos de algoritmos: los
+            algoritmos clásicos, que son aquellos diseñados para ejecutarse en
+            computadoras tradicionales basadas en bits clásicos y utilizan
+            operaciones lógicas y aritméticas para realizar cálculos, siendo
+            ampliamente utilizados en todas las áreas de la informática, desde
+            cálculos matemáticos hasta búsquedas en bases de datos y algoritmos
+            de ordenamiento; y los algoritmos cuánticos, que se basan en los
+            principios de la mecánica cuántica y utilizan qubits, que son la
+            unidad básica de información cuántica, aprovechan las propiedades
+            únicas de los qubits, como la superposición y el entrelazamiento,
+            para realizar cálculos de manera más eficiente en ciertos problemas
+            específicos. Los algoritmos cuánticos tienen el potencial de
+            resolver problemas complejos, como la factorización de números
+            grandes y la búsqueda en grandes conjuntos de datos, de manera más
+            rápida que los algoritmos clásicos.
           </p>
           <hr></hr>
         </div>

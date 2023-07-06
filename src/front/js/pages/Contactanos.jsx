@@ -10,24 +10,15 @@ export const Contactanos = () => {
   const cardRefs = useRef([]);
   useEffect(() => {
     const body = document.querySelector("body");
-    const loader = document.querySelector(".loader-wrap");
-    const links = document.querySelectorAll('a[href="#"]');
+
     const nav = document.querySelector("header nav");
-    const navToggle = document.querySelector("header nav .toggle");
-    const navSpanMiddle = document.querySelector("header nav .toggle .middle");
-    const navNavigationBar = document.querySelector(
-      "header nav .navigation-bar"
-    );
+
     const navNavigationBarLi = document.querySelectorAll(
       "header nav .navigation-bar li"
     );
     const headerText = document.querySelector("header .text");
     const headerSection = document.querySelector("header");
     const aboutSection = document.querySelector(".about-us");
-    const recipeSection = document.querySelector(".recipes");
-    const menuSection = document.querySelector(".menu");
-    const fixedImageSection = document.querySelector(".fixed-image");
-    const footerSection = document.querySelector("footer");
 
     const dots = document.querySelectorAll(".dots > div");
     const svgDown = document.querySelector("header .arrow-down");
@@ -44,18 +35,6 @@ export const Contactanos = () => {
     // remove loader
 
     // prevent links click hash
-    links.forEach((link) =>
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-      })
-    );
-
-    // toggle hamburger menu button
-    navToggle.addEventListener("click", () => {
-      navToggle.classList.toggle("active");
-      navSpanMiddle.classList.toggle("hide");
-      navNavigationBar.classList.toggle("show");
-    });
 
     // show active navigationbar li
     navNavigationBarLi.forEach((li) =>

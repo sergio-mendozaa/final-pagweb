@@ -9,26 +9,12 @@ export const Noticias = () => {
   useEffect(() => {
     const body = document.querySelector("body");
 
-    const links = document.querySelectorAll('a[href="#"]');
     const nav = document.querySelector("header nav");
-    const navToggle = document.querySelector("header nav .toggle");
-    const navSpanMiddle = document.querySelector("header nav .toggle .middle");
-    const navNavigationBar = document.querySelector(
-      "header nav .navigation-bar"
-    );
-    const navNavigationBarLi = document.querySelectorAll(
-      "header nav .navigation-bar li"
-    );
+
     const headerText = document.querySelector("header .text");
     const headerSection = document.querySelector("header");
     const aboutSection = document.querySelector(".about-us");
-    const recipeSection = document.querySelector(".recipes");
 
-    const fixedImageSection = document.querySelector(".fixed-image");
-
-    const dotOne = document.querySelector(".dots .one");
-    const dotTwo = document.querySelector(".dots .two");
-    const dotThree = document.querySelector(".dots .three");
     const dots = document.querySelectorAll(".dots > div");
     const svgDown = document.querySelector("header .arrow-down");
     const svgUp = document.querySelector(".copyright .arrow-up");
@@ -38,20 +24,6 @@ export const Noticias = () => {
     // remove loader
 
     // prevent links click hash
-    links.forEach((link) =>
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-      })
-    );
-
-    // show active navigationbar li
-    navNavigationBarLi.forEach((li) =>
-      li.addEventListener("click", () => {
-        const arr = Array.from(li.parentElement.children);
-        arr.forEach((li) => li.classList.remove("active"));
-        li.classList.add("active");
-      })
-    );
 
     // svg-up smooth scroll
     svgUp.addEventListener("click", () => {
@@ -75,32 +47,6 @@ export const Noticias = () => {
         headerText.style.opacity = -window.pageYOffset / 300 + 1;
       }
       // home page JS
-      if (pageTitle.text === "CriptoSasun") {
-        //change dots background color
-        if (window.pageYOffset < headerSection.offsetHeight * 0.5) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotTwo.classList.remove("active");
-          dotOne.classList.add("active");
-        } else if (
-          window.pageYOffset > headerSection.offsetHeight * 0.5 &&
-          window.pageYOffset < recipeSection.offsetTop * 0.72
-        ) {
-          dots.forEach((dot) => dot.classList.add("black"));
-        } else if (
-          window.pageYOffset > recipeSection.offsetTop * 0.75 &&
-          window.pageYOffset < menuSection.offsetTop * 0.81
-        ) {
-          dots.forEach((dot) => dot.classList.remove("black"));
-          dotOne.classList.remove("active");
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        }
-        {
-          dots.forEach((dot) => dot.classList.add("black"));
-          dotThree.classList.remove("active");
-          dotTwo.classList.add("active");
-        }
-      }
     };
 
     // home page JS
@@ -326,11 +272,11 @@ export const Noticias = () => {
               >
                 Bienvenidos a la biblioteca de noticias de nuestra empresa, el
                 compendio vivo de nuestra evolución. Aquí se hallan las crónicas
-                de nuestro pasado, presente y, en su debido tiempo, las
+                de nuestro pasado, presente y, en su debido tiempo,
                 anticipaciones de un futuro brillante. Descubran, exploren y
                 sumérjanse en la rica historia de nuestra trayectoria. Este es
                 el rincón donde la esencia de nuestra empresa se despliega en
-                narrativas, esperando a ser descubiertas por usted.
+                narrativas, esperando ser descubiertas por ustedes.
               </p>
             </div>
           </div>
@@ -365,19 +311,18 @@ export const Noticias = () => {
             una amplia variedad de noticias e investigaciones de alta calidad.
             Este espacio está diseñado para brindarles información relevante,
             precisa y actualizada sobre diversos temas relacionados con
-            Criptosasun. En nuestro sitio, encontrarán una selección
-            cuidadosamente curada de noticias y artículos que abarcan desde
-            avances tecnológicos hasta descubrimientos científicos, pasando por
-            tendencias en la industria y análisis profundos. Nuestro equipo de
-            expertos se ha dedicado a investigar y recopilar la información más
-            valiosa para asegurar que ustedes tengan acceso a contenido de
-            primera categoría.
+            Criptosasun. Aquí, encontrarán una selección cuidadosamente curada
+            de noticias y artículos que abarcan desde avances tecnológicos hasta
+            descubrimientos científicos, pasando por tendencias en la industria
+            y análisis profundos. Nuestro equipo de expertos se ha dedicado a
+            investigar y recopilar la información más valiosa, para asegurar que
+            ustedes tengan acceso a contenido de primera categoría.
           </p>
         </div>
       </div>
       <div className="diagramatiempo" style={{ marginBottom: "10%" }}>
         <section id="timeline">
-          <h1 style={{ color: "black" }}>Línea del tiempo </h1>
+          <h1 style={{ color: "black" }}>Explora Nuestra Historia </h1>
 
           <div
             className="demo-card-wrapper"
