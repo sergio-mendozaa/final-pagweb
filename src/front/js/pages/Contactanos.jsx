@@ -275,16 +275,16 @@ export const Contactanos = () => {
         >
           <div
             className="text"
-            style={{ marginLeft: "12%", marginTop: "-1cm" }}
+            style={{ marginLeft: "16%", marginTop: "-1cm" }}
           >
-            <h2 style={{ marginLeft: "29%" }}>Estamos </h2>
-            <h3 style={{ color: "#7B8FA1", marginLeft: "33%" }}>
+            <h2 style={{ marginLeft: "24%" }}>Estamos </h2>
+            <h3 style={{ color: "#7B8FA1", marginLeft: "28%" }}>
               aquí para ti
             </h3>
             <div>
-              <i className="fas fa-asterisk" style={{ marginLeft: "43%" }}></i>
+              <i className="fas fa-asterisk" style={{ marginLeft: "39%" }}></i>
             </div>
-            <p style={{ textAlign: "center", marginLeft: "10%", width: "65%" }}>
+            <p style={{ textAlign: "center", marginLeft: "6%", width: "65%" }}>
               Te invitamos a explorar nuestras diversas redes sociales ubicadas
               en la parte inferior de esta página. Estas plataformas representan
               un canal accesible y eficaz para ponerte en contacto con nosotros,
@@ -311,18 +311,22 @@ export const Contactanos = () => {
               <Card
                 imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688585004/instagram_fyjjke.png"
                 href="https://www.instagram.com/criptosasun_energia/"
+                linkText="Instagram"
               />
               <Card
                 imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688632338/facebook_sqjzfp.png"
                 href="https://www.facebook.com/profile.php?id=100094072074642"
+                linkText="facebook"
               />
               <Card
                 imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688632248/gorjeo_vqqkdj.png"
                 href="https://twitter.com/criptoner_ "
+                linkText="twitter"
               />
               <Card
                 imgSrc="https://res.cloudinary.com/dwkb2dk5r/image/upload/v1688632248/linkedin_qnwgci.png"
                 href="https://www.linkedin.com/in/criptosasun-energ%C3%ADa-sl-533a8a281/"
+                linkText="linkedin"
               />
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../../styles/card.css";
 
-const Card = ({ imgSrc = "", href }) => {
+const Card = ({ imgSrc = "", href, linkText = "" }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Card = ({ imgSrc = "", href }) => {
       <div className="redes" ref={cardRef}>
         <img src={imgSrc} alt="Logo" />
         <a style={{ color: "black" }} href={href}>
-          {href}
+          {linkText}
         </a>
       </div>
     </>

@@ -26,6 +26,10 @@
   transition: 0.3s;
   text-align: center;
   height: 6cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilos para el contenido de las tarjetas */
